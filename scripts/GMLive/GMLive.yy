@@ -6,7 +6,7 @@
   "name":"GMLive",
   "parent":{
     "name":"GMLive",
-    "path":"folders/_Extensions/GMLive.yy",
+    "path":"folders/_Global/_Extensions/GMLive.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

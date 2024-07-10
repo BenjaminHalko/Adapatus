@@ -11,7 +11,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"GMLive",
-    "path":"folders/_Extensions/GMLive.yy",
+    "path":"folders/_Global/_Extensions/GMLive.yy",
   },
   "parentObjectId":null,
   "persistent":true,

@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"MACROS",
+  "%Name":"ColorPaletteColors",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"MACROS",
+  "name":"ColorPaletteColors",
   "parent":{
     "name":"_ConfigScripts",
     "path":"folders/_Global/_ConfigScripts.yy",

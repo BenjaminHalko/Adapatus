@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"ScreenManagerFunctions",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"ScreenManagerFunctions",
+  "parent":{
+    "name":"ScreenManager",
+    "path":"folders/_Global/ScreenManager.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

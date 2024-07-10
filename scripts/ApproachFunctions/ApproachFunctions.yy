@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"MACROS",
+  "%Name":"ApproachFunctions",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"MACROS",
+  "name":"ApproachFunctions",
   "parent":{
-    "name":"_ConfigScripts",
-    "path":"folders/_Global/_ConfigScripts.yy",
+    "name":"_HelperScripts",
+    "path":"folders/_Global/_HelperScripts.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

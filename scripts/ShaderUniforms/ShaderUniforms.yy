@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"MACROS",
+  "%Name":"ShaderUniforms",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"MACROS",
+  "name":"ShaderUniforms",
   "parent":{
-    "name":"_ConfigScripts",
-    "path":"folders/_Global/_ConfigScripts.yy",
+    "name":"_Shaders",
+    "path":"folders/_Global/_Shaders.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

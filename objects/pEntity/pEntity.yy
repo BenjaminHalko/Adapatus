@@ -1,13 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"obj_blank_object",
+  "%Name":"pEntity",
   "eventList":[],
   "managed":true,
-  "name":"obj_blank_object",
+  "name":"pEntity",
   "overriddenProperties":[],
   "parent":{
-    "name":"GMLive",
-    "path":"folders/_Global/_Extensions/GMLive.yy",
+    "name":"_Parent",
+    "path":"folders/Entities/_Parent.yy",
   },
   "parentObjectId":null,
   "persistent":false,

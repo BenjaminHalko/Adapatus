@@ -1,15 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"oGlobalManager",
+  "%Name":"oDebug",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":82,"eventType":9,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":73,"eventType":9,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":80,"eventType":9,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"oGlobalManager",
+  "name":"oDebug",
   "overriddenProperties":[],
   "parent":{
-    "name":"_Global",
-    "path":"folders/_Global.yy",
+    "name":"_Debug",
+    "path":"folders/_Debug.yy",
   },
   "parentObjectId":null,
   "persistent":true,
