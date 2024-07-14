@@ -7,11 +7,11 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Wall",
-    "path":"folders/Entities/Wall.yy",
+    "path":"folders/Elements/Wall.yy",
   },
   "parentObjectId":{
-    "name":"pEntity",
-    "path":"objects/pEntity/pEntity.yy",
+    "name":"pElement",
+    "path":"objects/pElement/pElement.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -26,9 +26,9 @@
   "physicsShape":1,
   "physicsShapePoints":[
     {"x":0.0,"y":0.0,},
-    {"x":64.0,"y":0.0,},
-    {"x":64.0,"y":16.0,},
-    {"x":0.0,"y":16.0,},
+    {"x":32.0,"y":0.0,},
+    {"x":32.0,"y":8.0,},
+    {"x":0.0,"y":8.0,},
   ],
   "physicsStartAwake":true,
   "properties":[],

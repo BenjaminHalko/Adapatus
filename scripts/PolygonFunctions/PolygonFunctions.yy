@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"PolygonFunctions",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"PolygonFunctions",
+  "parent":{
+    "name":"_Global",
+    "path":"folders/_Global.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

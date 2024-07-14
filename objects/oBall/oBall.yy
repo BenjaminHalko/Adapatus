@@ -1,19 +1,17 @@
 {
   "$GMObject":"",
   "%Name":"oBall",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "eventList":[],
   "managed":true,
   "name":"oBall",
   "overriddenProperties":[],
   "parent":{
     "name":"Ball",
-    "path":"folders/Entities/Ball.yy",
+    "path":"folders/Elements/Ball.yy",
   },
   "parentObjectId":{
-    "name":"pEntity",
-    "path":"objects/pEntity/pEntity.yy",
+    "name":"pElement",
+    "path":"objects/pElement/pElement.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.0,

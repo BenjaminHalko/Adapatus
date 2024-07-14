@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"ElementList",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"ElementList",
+  "parent":{
+    "name":"Elements",
+    "path":"folders/Elements.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

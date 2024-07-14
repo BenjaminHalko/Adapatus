@@ -12,7 +12,7 @@ if (DebugMode) {
 	instance_create_layer(0, 0, layer, oDebug);
 }
 
-// Create Screen Manager
+// Create Managers
 instance_create_layer(0, 0, layer, oScreenManager)
 
 // Go to the next room

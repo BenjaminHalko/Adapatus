@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"CursorFunctions",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CursorFunctions",
+  "parent":{
+    "name":"Cursor",
+    "path":"folders/_Global/Cursor.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

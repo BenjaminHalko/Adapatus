@@ -1,3 +1,24 @@
+global.renderingGUI = false;
+global.guiSurface = undefined;
+
+#macro surface_set_target_base surface_set_target
+#macro surface_set_target surface_set_target_hook
+
+#macro surface_reset_target_base surface_reset_target
+#macro surface_reset_target surface_reset_target_hook
+
+function surface_set_target_hook(_surface) {
+	if (global.renderingGUI)
+		surface_reset_target_base();
+	surface_set_target_base(_surface);
+}
+
+function surface_reset_target_hook() {
+	surface_reset_target_base();
+	if (global.renderingGUI)
+		surface_set_target_base(global.guiSurface);
+}
+
 /// @desc Converts a set of colors to an array
 /// @param {Constant.Color} shadow
 /// @param {Constant.Color} dark

@@ -26,7 +26,7 @@
   "origin":4,
   "parent":{
     "name":"Ball",
-    "path":"folders/Entities/Ball.yy",
+    "path":"folders/Elements/Ball.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
