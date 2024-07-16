@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"EditorFunctions",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"EditorFunctions",
+  "parent":{
+    "name":"Simulation",
+    "path":"folders/Simulation.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

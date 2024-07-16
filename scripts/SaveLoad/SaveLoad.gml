@@ -7,7 +7,7 @@ function LevelSaveData() : SaveLoadParent("level") constructor {
 	allowedElements = [];
 	
 	// Load data
-	loadData();
+	//loadData();
 }
 
 /// @ignore

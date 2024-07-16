@@ -1,0 +1,3 @@
+/// @desc Debug Variables
+
+notifications = [];

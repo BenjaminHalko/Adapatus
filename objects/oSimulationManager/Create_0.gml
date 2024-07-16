@@ -4,3 +4,5 @@ globalvar levelData;
 levelData = new LevelSaveData();
 
 SimulationReset();
+
+testingTimer = 0;
