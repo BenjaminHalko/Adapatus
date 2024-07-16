@@ -1,0 +1,3 @@
+/// @desc Destroy Cursors
+
+DestroyCursors();

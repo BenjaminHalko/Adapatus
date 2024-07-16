@@ -40,7 +40,7 @@ function CreateCursors() {
 	var _numCursors = array_length(global.cursorSprites);
 	if (array_length(global.cursors) != _numCursors) global.cursors = array_create(_numCursors);
 
-	var _size = max(min(window_get_width()/ResWidth,window_get_height()/ResHeight),0.5);
+	var _size = CursorSize;
 	for(var i = 0; i < _numCursors; i++) {
 		var _spriteWidth = ceil(sprite_get_width(global.cursorSprites[i])*_size);
 		var _spriteHeight = ceil(sprite_get_height(global.cursorSprites[i])*_size);

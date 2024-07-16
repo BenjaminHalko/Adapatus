@@ -3,6 +3,6 @@ enum ELEMENT {
 	WALL
 }
 
-global.elementList = [];
-global.elementList[ELEMENT.PLAYER] =		new ElementTypeConfig(oBall, "Player");
-global.elementList[ELEMENT.WALL] =			new ElementTypeConfig(oWall, "Wall");
+global.elementConfigList = [];
+global.elementConfigList[ELEMENT.PLAYER] =		new ElementTypeConfig(oBall, "Player");
+global.elementConfigList[ELEMENT.WALL] =		new ElementTypeConfig(oWall, "Wall");

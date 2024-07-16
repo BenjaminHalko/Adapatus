@@ -7,3 +7,5 @@ shader_set_uniform_f_array(global.uColorPaletteColors, global.colorPaletteColors
 shader_set_uniform_f(global.uColorPaletteInvert, paletteInvertAmount);
 draw_surface(global.guiSurface, 0, 0);
 shader_reset();
+
+physics_draw_debug();

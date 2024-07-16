@@ -13,7 +13,13 @@ if (DebugMode) {
 }
 
 // Create Managers
-instance_create_layer(0, 0, layer, oScreenManager)
+instance_create_layer(0, 0, layer, oScreenManager);
+
+// Set Cursor
+CreateCursors();
+cursorPalette = global.colorPalette;
+cursorInvert = global.colorPaletteInvert;
+cursorSize = CursorSize;
 
 // Go to the next room
 room_goto_next();

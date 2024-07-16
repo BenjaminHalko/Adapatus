@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"DrawOutline",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"DrawOutline",
+  "parent":{
+    "name":"_HelperScripts",
+    "path":"folders/_Global/_HelperScripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

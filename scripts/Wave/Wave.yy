@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"CursorFunctions",
+  "%Name":"Wave",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"CursorFunctions",
+  "name":"Wave",
   "parent":{
-    "name":"Cursor",
-    "path":"folders/_Global/Cursor.yy",
+    "name":"_HelperScripts",
+    "path":"folders/_Global/_HelperScripts.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

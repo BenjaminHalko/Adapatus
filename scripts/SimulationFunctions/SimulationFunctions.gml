@@ -4,22 +4,26 @@ global.inLevelEditor = true;
 /// @desc	Starts the simulation by activating physics
 function SimulationStart() {
 	global.simulationActive = true;
+	physics_world_gravity(0, 10);
 	with(pElement) {
+		//phy_fixed_rotation = false;
+		//ElementSetMoveable(ELEMENT_STATE.MOVING);
 		phy_active = true;
 	}
 }
 
 /// @desc	Resets the simulation back to its initial state
 function SimulationReset() {
+	physics_world_gravity(0, 0);
 	global.simulationActive = false;
 	instance_destroy(pElement);
 	for (var i = 0; i < array_length(levelData.elements); i++) {
-		var _params =		levelData.elements[i];
-		instance_create_layer(_params.x, _params.y, "Entities", _params.type, {
-			isUnlocked: _params.isUnlocked,
-			levelDataPos: i,
-			phy_rotation: _params.rotation
-		});
+		var _params = levelData.elements[i];
+		with(instance_create_layer(_params.x, _params.y, "Entities", global.elementConfigList[_params.type].object)) {
+			isUnlocked = true;
+			levelDataPos = i;
+			phy_rotation = _params.rotation;
+		}
 	}
 }
 
