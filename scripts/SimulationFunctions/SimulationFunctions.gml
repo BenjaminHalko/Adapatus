@@ -10,36 +10,46 @@ global.inLevelEditor = true;
 function SimulationStart() {
 	global.simulationActive = true;
 	oSimulationManager.testingTimer = 0;
-	physics_world_gravity(0, 10);
-	with(pElement) {
-		phy_active = true;
+	
+	var _array = [];
+	with(pElement)
+		array_push(_array, id);	
 		
-		var _list = ds_list_create();
-		var _num = instance_position_list(x, y, pElement, _list, false);
-		for(var i = 0; i < _num; i++) {
-			var _obj = _list[| i];	
-			if (_obj.priority >= priority)
-				continue;
-				
-			physics_joint_revolute_create(id, _obj.id, x, y, 0, 0, false, 0, 0, false, false);
-		}
-		ds_list_destroy(_list);
+	array_sort(_array, function(_a, _b) {
+		return (_a.levelDataPos - _b.levelDataPos) + (_b.priority - _a.priority) * array_length(levelData.elements);
+	});
+		
+	for(var i = 0; i < array_length(_array); i++) {
+		with(_array[i])
+			event_user(1);
 	}
+	
+	for(var i = 0; i < array_length(_array); i++)
+		_array[i].phy_active = true;
 }
 
 /// @desc	Resets the simulation back to its initial state
 function SimulationReset() {
-	physics_world_gravity(0, 0);
+	EnableLive;
+	
 	global.simulationActive = false;
 	instance_destroy(pElement);
+	
 	for (var i = 0; i < array_length(levelData.elements); i++) {
 		var _params = levelData.elements[i];
-		with(instance_create_layer(_params.x, _params.y, "Entities", global.elementConfigList[_params.type].object)) {
+		with(instance_create_layer(_params.x, _params.y, "Entities", global.elementConfigList[_params.type].object, {
+			phy_active: false,
+			image_angle: _params.rotation,
+			phy_rotation: _params.rotation
+		})) {
 			isUnlocked = _params.isUnlocked;
 			levelDataPos = i;
-			phy_rotation = _params.rotation;
+			image_angle = _params.rotation;
 		}
 	}
+	
+	with(pElement)
+		event_user(0);
 }
 
 /// @desc	This is a configuration for an element, used to map 

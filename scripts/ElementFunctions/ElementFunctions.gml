@@ -1,15 +1,15 @@
-
-
 /// @desc Adds an element to the element list
 /// @param {struct.ELEMENT} type
 /// @param {real} x
 /// @param {real} y
 /// @param {real} rotation
 function AddElement(_type, _x, _y, _rotation) {
-	var _params = new ElementParams(_type, _x, _y, _rotation, true);
-	with(instance_create_layer(_x, _y, "Entities", global.elementConfigList[_type].object)) {
-		isUnlocked = true;
-		phy_rotation = _rotation;
+	var _params = new ElementParams(_type, _x, _y, _rotation, !global.inLevelEditor);
+	with(instance_create_layer(_x, _y, "Entities", global.elementConfigList[_type].object, {
+		phy_active: false,
+		phy_rotation: _rotation
+	})) {
+		isUnlocked = _params.isUnlocked;
 	}
 	array_push(levelData.elements, _params);
 }
@@ -23,7 +23,7 @@ function EditElement(_id) {
 		var _params = levelData.elements[levelDataPos];
 		_params.x = round(phy_position_x);
 		_params.y = round(phy_position_y);
-		_params.rotation = phy_rotation;
+		_params.rotation = round(phy_rotation);
 		_params.isUnlocked = isUnlocked;
 	}
 }

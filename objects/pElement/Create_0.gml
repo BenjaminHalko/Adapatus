@@ -5,9 +5,6 @@ EnableLive;
 isUnlocked = false;
 levelDataPos = array_length(levelData.elements);
 
-// Start off frozen
-phy_active = false;
-
 // Store if the mouse is hovering over the element
 isHovered = false;
 
@@ -15,7 +12,3 @@ isHovered = false;
 dragXOffset = 0;
 dragYOffset = 0;
 dragRotationOffset = 0;
-initialLayer = layer;
-
-// Join
-isJoined = false;
