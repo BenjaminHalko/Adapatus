@@ -4,7 +4,7 @@ function LevelSaveData() : SaveLoadParent("levelData/level") constructor {
 	elements = [];
 	
 	// Entities the player is allowed to use
-	allowedElements = [];
+	allowedElements = {};
 	
 	// Load data
 	loadData();

@@ -1,15 +1,43 @@
 /// @desc	Updates the active elements
-/// @param	{array<enum.ELEMENT>} elements
+/// @param	{struct} elements
 function UpdateUsableElements(_elements) {
 	with (oToolbar) {
 		usableElements = [];
-		for (var i = 0; i < array_length(_elements); i++)
-			array_push(usableElements, new ElementToolbarWindow(_elements[i]));
+		var _elementIDs = struct_get_names(_elements);
+		array_sort(_elementIDs, function(_a, _b) {
+			_a = array_get_index(global.elementSortList, real(_a));
+			_b = array_get_index(global.elementSortList, real(_b));
+			return _a - _b;
+		})
+		for (var i = 0; i < array_length(_elementIDs); i++) {
+			var _id = real(_elementIDs[i]);
+			array_push(usableElements, new ElementToolbarWindow(_id));
+			global.elementQuantity[$ _id] = _elements[$ _id];
+		}
+	}
+}
+
+/// @desc	Updates the active elements
+/// @param	{enum.ELEMENT} element
+function AddUsableElement(_element) {
+	with (oToolbar) {
+		var _index = 0;
+		var _targetIndex = array_get_index(global.elementSortList, _element);
+		for(var i = 0; i < array_length(usableElements); i++) {
+			var _thisElement = usableElements[i].type;
+			if (_thisElement == _element)
+				return;
+			if (array_get_index(global.elementSortList, _thisElement) > _targetIndex)
+				break;
+			_index++;
+		}
+		array_insert(usableElements, _index, new ElementToolbarWindow(_element));
 	}
 }
 
 /// @desc	A window for the GUI
 /// @param	{enum.ELEMENT} element
+/// @param	{real} quantity
 function ElementToolbarWindow(_element) constructor {
 	var _elementInfo = global.elementConfigList[_element];
 	var _minWidth = 56;
@@ -25,4 +53,5 @@ function ElementToolbarWindow(_element) constructor {
 	width = max(_sprWidth + 6, StringWidth(name) + 6, _minWidth);
 	hoveredPercent = 0;
 	burstEffect = 0;
+	activePercent = 0;
 }

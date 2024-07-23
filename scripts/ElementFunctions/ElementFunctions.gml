@@ -40,6 +40,9 @@ function DeleteElement(_id) {
 		if (levelDataPos > _id.levelDataPos)
 			levelDataPos--;
 	}
+	var _type = levelData.elements[_id.levelDataPos].type;
+	global.elementQuantity[$ _type]++;
+	AddUsableElement(_type);
 	array_delete(levelData.elements, _id.levelDataPos, 1);
 	instance_destroy(_id);
 }

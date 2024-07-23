@@ -9,6 +9,15 @@ enum ELEMENT {
 	MAX
 }
 
+global.elementSortList = [
+	ELEMENT.WHEEL,
+	ELEMENT.MOTORIZED_WHEEL,
+	ELEMENT.BOX,
+	ELEMENT.LONG_BOX,
+	ELEMENT.WALL,
+	ELEMENT.SPIKE
+]
+
 global.elementConfigList = [];
 global.elementConfigList[ELEMENT.WHEEL] =			new ElementTypeConfig(oBall, "Wheel");
 global.elementConfigList[ELEMENT.WALL] =			new ElementTypeConfig(oWall, "Wall");

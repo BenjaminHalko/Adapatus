@@ -12,5 +12,5 @@ elementInHand = noone;
 elementHovered = -1;
 elementListXStart = 40;
 usableElements = [];
-for (var i = 0; i < array_length(levelData.allowedElements); i++)
-	array_push(usableElements, new ElementToolbarWindow(levelData.allowedElements[i]));
+
+UpdateUsableElements(levelData.allowedElements);

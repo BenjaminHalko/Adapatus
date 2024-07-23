@@ -2,10 +2,12 @@ enum PALETTE {
 	GAMEBOY,
 	REDISH_ORANGE,
 	BLUE,
+	PURPLE,
+	SUNSET,
 	GREYSCALE // MAKE SURE THIS IS LAST, OR ELSE DEBUGGING WILL BREAK
 }
 
-global.colorPalette = PALETTE.GAMEBOY;
+global.colorPalette = PALETTE.PURPLE;
 global.colorPaletteInvert = false;
 global.colorPaletteColors = {};
 
@@ -17,6 +19,12 @@ global.colorPaletteColors[PALETTE.REDISH_ORANGE] =
 	
 global.colorPaletteColors[PALETTE.BLUE] =
 	PaletteToArray(#03045e, #0077b6, #00b4d8, #90e0ef);
+	
+global.colorPaletteColors[PALETTE.PURPLE] =
+	PaletteToArray(#230c33, #592e83, #9984d4, #caa8f5);
+	
+global.colorPaletteColors[PALETTE.SUNSET] =
+	PaletteToArray(#355070, #6d597a, #b56576, #e56b6f);
 	
 global.colorPaletteColors[PALETTE.GREYSCALE] =
 	PaletteToArray(#463f3a, #8a817c, #bcb8b1, #f4f3ee);
