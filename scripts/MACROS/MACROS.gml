@@ -1,7 +1,7 @@
 #macro ResWidth 480
 #macro ResHeight 270
 
-#macro CursorSize max(min(window_get_width()/ResWidth, window_get_height()/ResHeight),0.5)
+#macro CursorSize (global.hasNativeCursor ? max(min(window_get_width()/ResWidth, window_get_height()/ResHeight),0.5) : 1)
 
 // Debug
 #macro DebugMode true

@@ -8,4 +8,8 @@ shader_set_uniform_f(global.uColorPaletteInvert, paletteInvertAmount);
 draw_surface(global.guiSurface, 0, 0);
 shader_reset();
 
-physics_draw_debug();
+if (!global.hasNativeCursor and MouseInWindow()) {
+	var _mx = MouseGUIX();
+	var _my = MouseGUIY();
+	draw_sprite(global.cursors[global.currentCursorType], 0, _mx, _my);
+}

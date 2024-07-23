@@ -17,7 +17,6 @@ function SetCursor(_type) {
 	if (global.currentCursorType != _type) {
 		global.currentCursorType = _type;
 		if (global.hasNativeCursor) native_cursor_set(global.cursors[_type]);
-		else cursor_sprite = global.cursors[_type];
 	}
 }
 
@@ -28,7 +27,6 @@ function DestroyCursors() {
 			native_cursor_destroy(global.cursors[i]);	
 		}
 	} else {
-		cursor_sprite = -1;
 		for(var i = 0; i < array_length(global.cursors); i++) {
 			sprite_delete(global.cursors[i]);
 		}
