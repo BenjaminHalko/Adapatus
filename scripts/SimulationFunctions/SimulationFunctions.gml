@@ -4,7 +4,7 @@ enum TOOL_MODE {
 }
 
 global.simulationActive = false;
-global.inLevelEditor = true;
+global.inLevelEditor = false;
 
 /// @desc	Starts the simulation by activating physics
 function SimulationStart() {

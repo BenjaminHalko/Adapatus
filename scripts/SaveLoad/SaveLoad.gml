@@ -1,5 +1,5 @@
 /// @desc	Creates a new save data struct
-function LevelSaveData() : SaveLoadParent("level") constructor {
+function LevelSaveData() : SaveLoadParent("levelData/level") constructor {
 	// Entities already existing in the level
 	elements = [];
 	
@@ -7,7 +7,7 @@ function LevelSaveData() : SaveLoadParent("level") constructor {
 	allowedElements = [];
 	
 	// Load data
-	//loadData();
+	loadData();
 }
 
 /// @ignore
