@@ -1,21 +1,24 @@
-/// @desc Adds an element to the element list
-/// @param {struct.ELEMENT} type
-/// @param {real} x
-/// @param {real} y
-/// @param {real} rotation
+/// @desc	Adds an element to the element list
+/// @param	{struct.ELEMENT} type
+/// @param	{real} x
+/// @param	{real} y
+/// @param	{real} rotation
+/// @return	{Id.Instance}
 function AddElement(_type, _x, _y, _rotation) {
 	var _params = new ElementParams(_type, _x, _y, _rotation, !global.inLevelEditor);
-	with(instance_create_layer(_x, _y, "Entities", global.elementConfigList[_type].object, {
+	var _elementID = instance_create_layer(_x, _y, "Entities", global.elementConfigList[_type].object, {
 		phy_active: false,
 		phy_rotation: _rotation
-	})) {
+	});
+	with(_elementID) {
 		isUnlocked = _params.isUnlocked;
 	}
 	array_push(levelData.elements, _params);
+	return _elementID;
 }
 
-/// @desc Edits an entry in the save data to match the element
-/// @param {Id.Instance} id
+/// @desc	Edits an entry in the save data to match the element
+/// @param	{Id.Instance} id
 function EditElement(_id) {
 	if (global.simulationActive)
 		show_error("Cannot edit while active", true);
@@ -28,8 +31,8 @@ function EditElement(_id) {
 	}
 }
 
-/// @desc Removes an element
-/// @param {Id.Instance} id
+/// @desc	Removes an element
+/// @param	{Id.Instance} id
 function DeleteElement(_id) {
 	with (pElement) {
 		if (id == _id)

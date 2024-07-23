@@ -1,21 +1,9 @@
 /// @desc Manage Simulation
 
+EnableLive;
+
 // DEBUG
-if (!global.simulationActive) {
-	if (keyboard_check_pressed(ord("1")))
-		AddElement(ELEMENT.WHEEL, mouse_x, mouse_y, 0);
-	if (keyboard_check_pressed(ord("2")))
-		AddElement(ELEMENT.WALL, mouse_x, mouse_y, 0);
-	if (keyboard_check_pressed(ord("3")))
-		AddElement(ELEMENT.BOX, mouse_x, mouse_y, 0);
-	if (keyboard_check_pressed(ord("4")))
-		AddElement(ELEMENT.LONG_BOX, mouse_x, mouse_y, 0);
-	if (keyboard_check_pressed(ord("5")))
-		AddElement(ELEMENT.SPIKE, mouse_x, mouse_y, 0);
-	if (keyboard_check_pressed(ord("6")))
-		AddElement(ELEMENT.MOTORIZED_WHEEL, mouse_x, mouse_y, 0);
-}
-else {
+if (global.simulationActive) {
 	testingTimer += 1/60;	
 }
 

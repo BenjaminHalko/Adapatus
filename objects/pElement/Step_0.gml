@@ -5,7 +5,7 @@ EnableLive;
 if (global.elementInteracting == noone) {
 	// Select Object
 	if (isHovered) {
-		depth = -1000 - priority;
+		depth = -1000;
 		if (mouse_check_button_pressed(mb_left)) {
 			global.elementInteracting = id;
 			dragXOffset = mouse_x - x;
@@ -29,10 +29,11 @@ if (global.elementInteracting == noone) {
 			DeleteElement(id);
 		}
 	} else {
-		depth = - priority;	
+		depth = -priority * array_length(levelData.elements) - levelDataPos;
 	}
 } else if (global.elementInteracting == id) {
-	depth = - priority;	
+	depth = -1000;
+	isHovered = true;
 	switch (global.editorTool) {
 		case EDITOR_TOOL.MOVE:
 			phy_position_x = round(mouse_x - dragXOffset);

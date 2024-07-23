@@ -4,7 +4,9 @@ enum ELEMENT {
 	BOX,
 	SPIKE,
 	LONG_BOX,
-	MOTORIZED_WHEEL
+	MOTORIZED_WHEEL,
+	
+	MAX
 }
 
 global.elementConfigList = [];
@@ -13,4 +15,4 @@ global.elementConfigList[ELEMENT.WALL] =			new ElementTypeConfig(oWall, "Wall");
 global.elementConfigList[ELEMENT.BOX] =				new ElementTypeConfig(oBox, "Box");
 global.elementConfigList[ELEMENT.SPIKE] =			new ElementTypeConfig(oSpike, "Spike");
 global.elementConfigList[ELEMENT.LONG_BOX] =		new ElementTypeConfig(oLongBox, "Long Box");
-global.elementConfigList[ELEMENT.MOTORIZED_WHEEL] =	new ElementTypeConfig(oMotorizedBall, "Motorized Wheel");
+global.elementConfigList[ELEMENT.MOTORIZED_WHEEL] =	new ElementTypeConfig(oMotorizedBall, "Motor Wheel");

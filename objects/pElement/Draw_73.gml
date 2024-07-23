@@ -29,4 +29,5 @@ if (global.elementInteracting != id and !global.simulationActive) {
 	} 
 }
 
-draw_self();
+if (global.elementInteracting != id)
+	draw_self();

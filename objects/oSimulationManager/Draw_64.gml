@@ -2,11 +2,15 @@
 
 EnableLive;
 
+if (global.simulationActive)
+draw_text(ResWidth - 20, 8, testingTimer);
+
+/*
+
 // Draw Bar
 DrawRectangle(0, ResHeight - ToolbarHeight, ResWidth, ResHeight, COLOR.SHADOW);
 
-if (global.simulationActive)
-draw_text(ResWidth - 20, 8, testingTimer);
+
 
 
 draw_set_color(c_white);

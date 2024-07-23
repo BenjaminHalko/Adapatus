@@ -2,7 +2,7 @@
 
 // Resolution
 surface_resize(application_surface, ResWidth, ResHeight);
-window_set_size(ResWidth * 4, ResHeight * 4);
+window_set_size(ResWidth * 3, ResHeight * 3);
 window_center();
 
 // Surface

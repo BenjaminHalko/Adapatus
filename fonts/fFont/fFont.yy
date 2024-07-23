@@ -119,8 +119,8 @@
   "maintainGms1Font":false,
   "name":"fFont",
   "parent":{
-    "name":"_Global",
-    "path":"folders/_Global.yy",
+    "name":"Text",
+    "path":"folders/_Global/Text.yy",
   },
   "pointRounding":0,
   "ranges":[

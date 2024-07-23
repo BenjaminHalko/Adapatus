@@ -1,3 +1,10 @@
+enum COLOR_TYPE {
+	SHADOW,
+	DARK,
+	MID,
+	LIGHT
+}
+
 global.renderingGUI = false;
 global.guiSurface = undefined;
 

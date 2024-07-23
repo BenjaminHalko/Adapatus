@@ -14,12 +14,16 @@ if (DebugMode) {
 
 // Create Managers
 instance_create_layer(0, 0, layer, oScreenManager);
+instance_create_layer(0, 0, layer, oCamera);
 
 // Set Cursor
 CreateCursors();
 cursorPalette = global.colorPalette;
 cursorInvert = global.colorPaletteInvert;
 cursorSize = CursorSize;
+
+// Initializes Scribble
+ScribbleConfig();
 
 // Go to the next room
 room_goto_next();
