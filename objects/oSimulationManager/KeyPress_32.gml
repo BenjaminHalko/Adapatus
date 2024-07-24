@@ -1,9 +1,9 @@
 /// @desc Start / Stop Simulation
 
-if (global.elementInteracting)
+if (global.gameState == GameState.EDITING_ELEMENT)
 	exit;
 
-if (global.simulationActive)
+if (global.gameState == GameState.SIMULATION)
 	SimulationReset();
 else
 	SimulationStart();

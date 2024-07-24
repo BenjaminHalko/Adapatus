@@ -3,14 +3,13 @@ enum TOOL_MODE {
 	Rotate
 }
 
-global.simulationActive = false;
 global.inLevelEditor = false;
 global.elementQuantity = {};
 global.placedElements = [];
 
 /// @desc	Starts the simulation by activating physics
 function SimulationStart() {
-	global.simulationActive = true;
+	global.gameState = GameState.SIMULATION;
 	oSimulationManager.testingTimer = 0;
 	
 	var _array = [];
@@ -34,7 +33,7 @@ function SimulationStart() {
 function SimulationReset() {
 	EnableLive;
 	
-	global.simulationActive = false;
+	global.gameState = GameState.IDLE;
 	instance_destroy(pElement);
 	
 	for (var i = 0; i < array_length(global.placedElements); i++) {

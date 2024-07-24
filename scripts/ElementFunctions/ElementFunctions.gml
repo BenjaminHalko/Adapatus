@@ -20,7 +20,7 @@ function AddElement(_type, _x, _y, _rotation) {
 /// @desc	Edits an entry in the save data to match the element
 /// @param	{Id.Instance} id
 function EditElement(_id) {
-	if (global.simulationActive)
+	if (global.gameState == GameState.SIMULATION)
 		show_error("Cannot edit while active", true);
 	with (_id) {
 		var _params = global.placedElements[levelDataPos];

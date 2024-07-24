@@ -41,6 +41,7 @@ if (global.elementInteracting == noone) {
 	
 			if (!mouse_check_button(mb_left)) {
 				global.elementInteracting = noone;
+				global.gameState = GameState.IDLE;
 				EditElement(id);
 			}
 		break;
@@ -49,6 +50,7 @@ if (global.elementInteracting == noone) {
 			
 			if (!mouse_check_button(mb_right)) {
 				global.elementInteracting = noone;
+				global.gameState = GameState.IDLE;
 				EditElement(id);
 			}
 		break;

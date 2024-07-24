@@ -3,7 +3,7 @@
 EnableLive;
 
 // DEBUG
-if (global.simulationActive) {
+if (global.gameState == GameState.SIMULATION) {
 	testingTimer += 1/60;	
 }
 
@@ -12,7 +12,7 @@ if (global.simulationActive) {
 with(pElement)
 	isHovered = false;
 	
-if (!global.simulationActive and global.elementInteracting == noone) {
+if (global.gameState == GameState.IDLE) {
 	var _list = ds_list_create();
 	var _num = instance_position_list(mouse_x, mouse_y, pElement, _list, false);
 	var _listArray = array_create(_num);

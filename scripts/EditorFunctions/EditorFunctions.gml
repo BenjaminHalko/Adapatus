@@ -16,5 +16,5 @@ function LoadLevelEditor() {
 
 function ExitLevelEditor() {
 	global.inLevelEditor = false;
-	ReloadLevel();
+	UpdateUsableElements(levelData.elementQuantity);
 }
