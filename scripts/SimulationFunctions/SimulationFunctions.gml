@@ -6,6 +6,7 @@ enum TOOL_MODE {
 global.simulationActive = false;
 global.inLevelEditor = false;
 global.elementQuantity = {};
+global.placedElements = [];
 
 /// @desc	Starts the simulation by activating physics
 function SimulationStart() {
@@ -17,7 +18,7 @@ function SimulationStart() {
 		array_push(_array, id);	
 		
 	array_sort(_array, function(_a, _b) {
-		return (_a.levelDataPos - _b.levelDataPos) + (_b.priority - _a.priority) * array_length(levelData.elements);
+		return (_a.levelDataPos - _b.levelDataPos) + (_b.priority - _a.priority) * array_length(global.placedElements);
 	});
 		
 	for(var i = 0; i < array_length(_array); i++) {
@@ -36,8 +37,8 @@ function SimulationReset() {
 	global.simulationActive = false;
 	instance_destroy(pElement);
 	
-	for (var i = 0; i < array_length(levelData.elements); i++) {
-		var _params = levelData.elements[i];
+	for (var i = 0; i < array_length(global.placedElements); i++) {
+		var _params = global.placedElements[i];
 		with(instance_create_layer(_params.x, _params.y, "Entities", global.elementConfigList[_params.type].object, {
 			phy_active: false,
 			image_angle: _params.rotation,

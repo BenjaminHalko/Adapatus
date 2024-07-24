@@ -29,7 +29,7 @@ if (global.elementInteracting == noone) {
 			DeleteElement(id);
 		}
 	} else {
-		depth = -priority * array_length(levelData.elements) - levelDataPos;
+		depth = -priority * array_length(global.placedElements) - levelDataPos;
 	}
 } else if (global.elementInteracting == id) {
 	depth = -1000;

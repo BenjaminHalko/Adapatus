@@ -3,7 +3,7 @@
 EnableLive;
 
 isUnlocked = false;
-levelDataPos = array_length(levelData.elements);
+levelDataPos = array_length(global.placedElements);
 
 // Store if the mouse is hovering over the element
 isHovered = false;

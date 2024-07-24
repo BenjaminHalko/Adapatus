@@ -1,8 +1,9 @@
 /// @desc	Updates the active elements
 /// @param	{struct} elements
 function UpdateUsableElements(_elements) {
+	for(var i = 0; i < ELEMENT.MAX; i++)
+		global.elementQuantity[$ i] = 0;
 	with (oToolbar) {
-		usableElements = [];
 		var _elementIDs = struct_get_names(_elements);
 		array_sort(_elementIDs, function(_a, _b) {
 			_a = array_get_index(global.elementSortList, real(_a));
@@ -11,7 +12,7 @@ function UpdateUsableElements(_elements) {
 		})
 		for (var i = 0; i < array_length(_elementIDs); i++) {
 			var _id = real(_elementIDs[i]);
-			array_push(usableElements, new ElementToolbarWindow(_id));
+			AddUsableElement(_id);
 			global.elementQuantity[$ _id] = _elements[$ _id];
 		}
 	}
@@ -37,7 +38,6 @@ function AddUsableElement(_element) {
 
 /// @desc	A window for the GUI
 /// @param	{enum.ELEMENT} element
-/// @param	{real} quantity
 function ElementToolbarWindow(_element) constructor {
 	var _elementInfo = global.elementConfigList[_element];
 	var _minWidth = 56;

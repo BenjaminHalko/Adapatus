@@ -1,10 +1,11 @@
 /// @desc	Creates a new save data struct
-function LevelSaveData() : SaveLoadParent("levelData/level") constructor {
+/// @param	{string} filename
+function LevelSaveData(_filename) : SaveLoadParent($"levelData/{_filename}") constructor {
 	// Entities already existing in the level
 	elements = [];
 	
 	// Entities the player is allowed to use
-	allowedElements = {};
+	elementQuantity = {};
 	
 	// Load data
 	loadData();
@@ -35,7 +36,8 @@ function SaveLoadParent(_savefile) constructor {
 		
 				var _existingNames = variable_struct_get_names(_existingData);
 				for(var i = 0; i < array_length(_existingNames); i++) {
-					self[$ _existingNames[i]] = _data[$ _existingNames[i]];
+					if (struct_exists(_data, _existingNames[i]))
+						self[$ _existingNames[i]] = _data[$ _existingNames[i]];
 				}
 			}
 		} catch (_exception) {

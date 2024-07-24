@@ -13,7 +13,7 @@ function AddElement(_type, _x, _y, _rotation) {
 	with(_elementID) {
 		isUnlocked = _params.isUnlocked;
 	}
-	array_push(levelData.elements, _params);
+	array_push(global.placedElements, _params);
 	return _elementID;
 }
 
@@ -23,7 +23,7 @@ function EditElement(_id) {
 	if (global.simulationActive)
 		show_error("Cannot edit while active", true);
 	with (_id) {
-		var _params = levelData.elements[levelDataPos];
+		var _params = global.placedElements[levelDataPos];
 		_params.x = round(phy_position_x);
 		_params.y = round(phy_position_y);
 		_params.rotation = round(phy_rotation);
@@ -40,9 +40,20 @@ function DeleteElement(_id) {
 		if (levelDataPos > _id.levelDataPos)
 			levelDataPos--;
 	}
-	var _type = levelData.elements[_id.levelDataPos].type;
+	var _type = global.placedElements[_id.levelDataPos].type;
 	global.elementQuantity[$ _type]++;
 	AddUsableElement(_type);
-	array_delete(levelData.elements, _id.levelDataPos, 1);
+	array_delete(global.placedElements, _id.levelDataPos, 1);
 	instance_destroy(_id);
+}
+
+/// @desc	Sorts a list of elements
+/// @param	{array<struct.ElementParams>}
+function SortElementArray(_elements) {
+	// TODO: Sort better
+	
+	array_sort(_elements, function(_a, _b) {
+		var _prioritySort = (_a.priority - _b.priority);
+		return _prioritySort;
+	});
 }

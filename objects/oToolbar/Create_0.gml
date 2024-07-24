@@ -12,5 +12,3 @@ elementInHand = noone;
 elementHovered = -1;
 elementListXStart = 40;
 usableElements = [];
-
-UpdateUsableElements(levelData.allowedElements);

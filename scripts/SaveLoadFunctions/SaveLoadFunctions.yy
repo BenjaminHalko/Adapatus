@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"SaveLoad",
+  "%Name":"SaveLoadFunctions",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"SaveLoad",
+  "name":"SaveLoadFunctions",
   "parent":{
-    "name":"Simulation",
-    "path":"folders/Simulation.yy",
+    "name":"Save Load",
+    "path":"folders/Save Load.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",
