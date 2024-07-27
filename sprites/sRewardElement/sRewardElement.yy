@@ -2,7 +2,7 @@
   "$GMSprite":"",
   "%Name":"sRewardElement",
   "bboxMode":0,
-  "bbox_bottom":43,
+  "bbox_bottom":47,
   "bbox_left":0,
   "bbox_right":43,
   "bbox_top":0,
@@ -17,7 +17,7 @@
   ],
   "gridX":0,
   "gridY":0,
-  "height":44,
+  "height":48,
   "HTile":false,
   "layers":[
     {"$GMImageLayer":"","%Name":"8878774c-6eae-41fc-94f8-9d0a38669466","blendMode":0,"displayName":"default","isLocked":false,"name":"8878774c-6eae-41fc-94f8-9d0a38669466","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
@@ -45,8 +45,8 @@
   },
   "origin":9,
   "parent":{
-    "name":"Sprites",
-    "path":"folders/GUI/Sprites.yy",
+    "name":"Reward",
+    "path":"folders/GUI/Sprites/Reward.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

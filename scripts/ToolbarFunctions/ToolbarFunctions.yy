@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"ToolbarFunctions",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"ToolbarFunctions",
+  "parent":{
+    "name":"GUI",
+    "path":"folders/GUI.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

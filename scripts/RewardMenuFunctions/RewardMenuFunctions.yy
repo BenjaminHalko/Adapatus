@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"GUIFunctions",
+  "%Name":"RewardMenuFunctions",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"GUIFunctions",
+  "name":"RewardMenuFunctions",
   "parent":{
     "name":"GUI",
     "path":"folders/GUI.yy",
