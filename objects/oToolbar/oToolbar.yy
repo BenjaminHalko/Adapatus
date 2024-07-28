@@ -10,8 +10,8 @@
   "name":"oToolbar",
   "overriddenProperties":[],
   "parent":{
-    "name":"GUI",
-    "path":"folders/GUI.yy",
+    "name":"Toolbar",
+    "path":"folders/GUI/Toolbar.yy",
   },
   "parentObjectId":null,
   "persistent":false,

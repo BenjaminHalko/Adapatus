@@ -44,8 +44,8 @@
   },
   "origin":0,
   "parent":{
-    "name":"Reward",
-    "path":"folders/GUI/Sprites/Reward.yy",
+    "name":"_Menu System Base",
+    "path":"folders/GUI/_Menu System Base.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

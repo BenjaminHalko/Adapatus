@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"ToolbarFunctions",
+  "%Name":"ElementRewardWindow",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"ToolbarFunctions",
+  "name":"ElementRewardWindow",
   "parent":{
-    "name":"Toolbar",
-    "path":"folders/GUI/Toolbar.yy",
+    "name":"Reward Menu",
+    "path":"folders/GUI/Reward Menu.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

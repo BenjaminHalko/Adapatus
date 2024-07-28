@@ -27,9 +27,8 @@ if (active) {
 	var _my = MouseGUIY();
 	for(var i = 0; i < array_length(choiceQueue[0]); i++) {
 		var _info = choiceQueue[0][i];
-		var _x1 = x + _info.x - (_info.window.width / 2 - 1);
-		var _y1 = y - _info.window.height / 2;
-		if (point_in_rectangle(_mx, _my, _x1, _y1, _x1 + _info.window.width, _y1 + _info.window.height)) {
+		_info.CheckIfHovered();
+		if (_info.__isHovered) {
 			elementHovered = i;
 		}
 	}
@@ -38,8 +37,8 @@ if (active) {
 		if (mouse_check_button_pressed(mb_left)) {
 			var _info = choiceQueue[0][elementHovered];
 			active = false;	
-			global.elementQuantity[$ _info.window.type] += _info.quantity;
-			AddUsableElement(_info.window.type);
+			global.elementQuantity[$ _info.__type] += _info.__quantity;
+			AddUsableElement(_info.__type);
 			if (array_length(choiceQueue) == 1)
 				done = true;
 		}

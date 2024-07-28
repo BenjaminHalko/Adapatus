@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"ToolbarFunctions",
+  "%Name":"ElementToolbarWindow",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"ToolbarFunctions",
+  "name":"ElementToolbarWindow",
   "parent":{
     "name":"Toolbar",
     "path":"folders/GUI/Toolbar.yy",

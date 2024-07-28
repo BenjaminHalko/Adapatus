@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"ToolbarFunctions",
+  "%Name":"__MenuWidget",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"ToolbarFunctions",
+  "name":"__MenuWidget",
   "parent":{
-    "name":"Toolbar",
-    "path":"folders/GUI/Toolbar.yy",
+    "name":"_Menu System Base",
+    "path":"folders/GUI/_Menu System Base.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

@@ -45,7 +45,7 @@
   "origin":6,
   "parent":{
     "name":"Sprites",
-    "path":"folders/GUI/Sprites.yy",
+    "path":"folders/GUI/Toolbar/Sprites.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"RewardMenuFunctions",
   "parent":{
-    "name":"GUI",
-    "path":"folders/GUI.yy",
+    "name":"Reward Menu",
+    "path":"folders/GUI/Reward Menu.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

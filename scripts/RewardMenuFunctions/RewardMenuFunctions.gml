@@ -15,25 +15,21 @@ function RewardMenuQueueRewards(_rewards) {
 		
 		for (var i = 0; i < _rewardNum; i++) {
 			var _info = _rewards[i];	
-			var _window = new ElementToolbarWindow(_info[0], sRewardElement);
-			textboxHeight = max(textboxHeight, _window.height);
-			textboxMinWidth = max(textboxMinWidth, _window.width);
-			textboxWidth += _window.width;
+			var _window = ElementRewardWindow(_info[0], _info[1]);
+			textboxHeight = max(textboxHeight, _window.__height);
+			textboxMinWidth = max(textboxMinWidth, _window.__width);
+			textboxWidth += _window.__width;
 			
-			array_push(_rewardQueue, {
-				quantity: _info[1],
-				window: _window,
-				x: 0
-			});
+			array_push(_rewardQueue, _window);
 		}
 		
 		textboxWidth += (_rewardNum - 1) * itemSpacing;
 		
 		var _x = - textboxWidth / 2;
 		for (var i = 0; i < _rewardNum; i++) {
-			_x += _rewardQueue[i].window.width / 2;
-			_rewardQueue[i].x = _x;
-			_x += _rewardQueue[i].window.width / 2 + itemSpacing;
+			_x += _rewardQueue[i].__width / 2;
+			_rewardQueue[i].Pos(ResWidth/2 + _x, ResHeight / 2);
+			_x += _rewardQueue[i].__width / 2 + itemSpacing;
 		}
 		
 		textboxWidth += textboxMarginX * 2;

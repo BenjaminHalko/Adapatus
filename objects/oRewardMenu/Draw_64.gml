@@ -12,5 +12,5 @@ draw_sprite_ext(sWindowBG, 0, ResWidth / 2 - _width / 2, y - textboxHeight / 2, 
 
 for (var i = 0; i < array_length(choiceQueue[0]); i++) {
 	var _info = choiceQueue[0][i];
-	_info.window.Draw(x + _info.x * xScale - (_info.window.width / 2-1), y - _info.window.height / 2 + 1, elementHovered == i, _info.quantity, true, alpha);
+	_info.Alpha(alpha).Draw(true, _info.__quantity);
 }
