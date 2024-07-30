@@ -1,9 +1,7 @@
 {
   "$GMObject":"",
   "%Name":"oCrateWall",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "eventList":[],
   "managed":true,
   "name":"oCrateWall",
   "overriddenProperties":[],
@@ -11,10 +9,13 @@
     "name":"Crate Walls",
     "path":"folders/Elements/Crate/Crate Walls.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"pElement",
+    "path":"objects/pElement/pElement.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
-  "physicsDensity":0.5,
+  "physicsDensity":50.0,
   "physicsFriction":0.2,
   "physicsGroup":1,
   "physicsKinematic":false,

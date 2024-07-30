@@ -33,6 +33,8 @@ function __ElementToolbarWindow(_element, _sprite) : MenuButton(_sprite) constru
 	
 	__textOffsetY = sprite_get_bbox_top(__sprite);
 	
+	__fixScale = false;
+	
 	// Offset BBox
 	__bboxRight = 3;
 	
@@ -59,7 +61,7 @@ function __ElementToolbarWindow(_element, _sprite) : MenuButton(_sprite) constru
 	/// @param	{bool} showElement
 	/// @param	{real} quantity
 	static DrawElement = function(_showElement, _quantity) {
-		var _extraY = __height * (__yScale - 1);
+		var _extraY = __yOffset * (__yScale - 1);
 		var _textOffset = -__yOffset + __textOffsetY - 5;
 		
 		DrawButton();

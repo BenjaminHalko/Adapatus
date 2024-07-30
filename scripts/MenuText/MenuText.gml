@@ -18,7 +18,7 @@ function __MenuText(_text) : __MenuWidget() constructor {
 	}
 	
 	Draw = function() {
-		ScribbleExt(__text).blend(c_white, __alpha).draw(__x, __y);	
+		ScribbleExt(__text).align(fa_left, fa_middle).blend(c_white, __alpha).draw(__x, __y);	
 	}
 	
 	Text(__text);

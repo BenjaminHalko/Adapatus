@@ -211,7 +211,7 @@ function CalculateSize() {
 			for (var j = 0; j < _numCols; j++) {
 				var _widget = _row[j];
 				_widget.__windowOffsetX = _posX;
-				_widget.__windowOffsetY = _posY;
+				_widget.__windowOffsetY = _posY + round(_rowSize.height / 2 * __gapYScale);
 				if (__uniformWidth[i])
 					_posX += round((__width / _numCols) * __gapXScale);
 				else
