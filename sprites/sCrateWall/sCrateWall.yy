@@ -4,7 +4,7 @@
   "bboxMode":0,
   "bbox_bottom":19,
   "bbox_left":0,
-  "bbox_right":0,
+  "bbox_right":1,
   "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -23,7 +23,7 @@
   ],
   "name":"sCrateWall",
   "nineSlice":null,
-  "origin":6,
+  "origin":7,
   "parent":{
     "name":"Crate Walls",
     "path":"folders/Elements/Crate/Crate Walls.yy",
@@ -75,7 +75,7 @@
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":0,
+    "xorigin":1,
     "yorigin":20,
   },
   "swatchColours":null,
@@ -86,5 +86,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":1,
+  "width":2,
 }
