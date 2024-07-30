@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"MenuText",
   "parent":{
-    "name":"_Menu System Base",
-    "path":"folders/GUI/_Menu System Base.yy",
+    "name":"_Menu System",
+    "path":"folders/GUI/_Menu System.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

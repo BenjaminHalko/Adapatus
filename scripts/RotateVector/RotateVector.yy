@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"MenuButton",
+  "%Name":"RotateVector",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"MenuButton",
+  "name":"RotateVector",
   "parent":{
-    "name":"_Menu System",
-    "path":"folders/GUI/_Menu System.yy",
+    "name":"_HelperScripts",
+    "path":"folders/_Global/_HelperScripts.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

@@ -27,109 +27,6 @@ function __MenuContainer(_widgets, _sprite) : __MenuWidget() constructor {
 	
 	__dimensionsDirty = true;
 	
-	static CalculateSize = function() {
-		if (!__dimensionsDirty)
-			return;
-			
-		var _numRows = array_length(__widgets);
-		var _rowSizes = array_create(_numRows);
-		var _minHeight = 0;
-		__width = 0;
-		__height = (_numRows - 1) * __gapY * __gapYScale;
-
-		// Check Size
-		for (var i = 0; i < _numRows; i++) {
-			var _row = __widgets[i];
-			var _numCols = array_length(_row);
-			var _width = (_numCols - 1) * __gapX * __gapXScale;
-			var _minWidth = 0;
-			var _height = 0;
-			
-			for (var j = 0; j < _numCols; j++) {
-				var _widget = _row[j];
-				_width += _widget.__width * __gapXScale;
-				_minWidth = max(_widget.__width, _minWidth);
-				_height = max(_widget.__height, _height);
-			}
-			
-			_width = max(_width, _minWidth);
-			
-			_rowSizes[i] = {
-				width: _width,
-				height: _height
-			};
-			
-			__width = max(_width, __width);
-			
-			_minHeight = max(_minHeight, _height);
-			__height += _height * __gapYScale;
-		}
-		
-		__height = max(__height, _minHeight);
-		
-		// Re Position
-		var _posY = 0;
-		switch(__valign) {
-			case fa_top:
-				_posY = __paddingY;
-			break;
-			case fa_middle:
-				_posY = - round(__height / 2);
-			break;
-			case fa_bottom:
-				_posY = - __height - __paddingY;
-			break;
-		}
-		
-		for (var i = 0; i < _numRows; i++) {
-			var _row = __widgets[i];
-			var _rowSize = _rowSizes[i];
-			var _numCols = array_length(_row);
-			var _posX = 0;
-			var _width = _rowSize.width;
-			var _uniformWidth = false;
-			
-			if (is_array(__uniformWidth)) {
-				if (__uniformWidth[i]) {
-					_width = __width;
-					_uniformWidth = true;
-				}
-			} else if (__uniformWidth) {
-				_width = __width;
-				_uniformWidth = true;
-			}
-			
-			switch(__halign) {
-				case fa_left:
-					_posX = __paddingX
-				break;
-				case fa_center:
-					_posX = - round(_width / 2);
-				break;
-				case fa_right:
-					_posX = - _width - __paddingX;
-				break;
-			}
-			
-			for (var j = 0; j < _numCols; j++) {
-				var _widget = _row[j];
-				_widget.__windowOffsetX = _posX;
-				_widget.__windowOffsetY = _posY;
-				if (_uniformWidth)
-					_posX += (_width / _numCols) * __gapXScale;
-				else
-					_posX += (_widget.__width + __gapX) * __gapXScale;
-			}
-			
-			_posY += (_rowSize.height + __gapY) * __gapYScale;
-		}
-		
-		__width += __paddingX * 2;
-		__height += __paddingY * 2;
-		
-		__dimensionsDirty = false;
-	}
-	
 	/// @param	{real} x
 	/// @param	{real} y
 	static Padding = function(_x, _y) {
@@ -220,3 +117,112 @@ function __MenuContainer(_widgets, _sprite) : __MenuWidget() constructor {
 		}
 	}
 }
+
+function CalculateSize() {
+		live_auto_call
+		
+		if (!__dimensionsDirty and false)
+			return;
+			
+		var _numRows = array_length(__widgets);
+		var _rowSizes = array_create(_numRows);
+		
+			
+		var _minHeight = 0;
+		__width = 0;
+		__height = (_numRows - 1) * __gapY * __gapYScale;
+		
+		// Reformat the uniform width
+		if (!is_array(__uniformWidth))
+			__uniformWidth = array_create(_numRows, __uniformWidth);
+
+		// Check Size
+		for (var i = 0; i < _numRows; i++) {
+			var _row = __widgets[i];
+			var _numCols = array_length(_row);
+			var _width = (_numCols - 1) * __gapX * __gapXScale;
+			var _minWidth = 0;
+			var _height = 0;
+			
+			for (var j = 0; j < _numCols; j++) {
+				var _widget = _row[j];
+				_width += round(_widget.__width * __gapXScale);
+				_minWidth = max(_widget.__width, _minWidth);
+				_height = max(_widget.__height, _height);
+			}
+			
+			_width = max(_width, _minWidth);
+			
+			_rowSizes[i] = {
+				width: _width,
+				height: _height,
+				widthNoGap: _width - (_numCols - 1) * __gapX * __gapXScale
+			};
+			
+			__width = max(_width, __width);
+			
+			_minHeight = max(_minHeight, _height);
+			__height += round(_height * __gapYScale);
+		}
+		
+		__height = max(__height, _minHeight);
+		
+		// Uniform
+		for(var i = 0; i < _numRows; i++) {
+			if (__uniformWidth[i]) {
+				var _numCols = array_length(__widgets[i]);
+				_rowSizes[i].width = __width;
+			}
+		}
+		
+		// Re Position
+		var _posY = 0;
+		switch(__valign) {
+			case fa_top:
+				_posY = __paddingY;
+			break;
+			case fa_middle:
+				_posY = - round(__height / 2);
+			break;
+			case fa_bottom:
+				_posY = - __height - __paddingY;
+			break;
+		}
+		
+		for (var i = 0; i < _numRows; i++) {
+			var _row = __widgets[i];
+			var _rowSize = _rowSizes[i];
+			var _numCols = array_length(_row);
+			var _posX = 0;
+			var _width = _rowSize.width;
+			
+			switch(__halign) {
+				case fa_left:
+					_posX = __paddingX;
+				break;
+				case fa_center:
+					_posX = - round(_rowSize.width / 2);
+				break;
+				case fa_right:
+					_posX = - _width - __paddingX;
+				break;
+			}
+			
+			for (var j = 0; j < _numCols; j++) {
+				var _widget = _row[j];
+				_widget.__windowOffsetX = _posX;
+				_widget.__windowOffsetY = _posY;
+				if (__uniformWidth[i])
+					_posX += round((__width / _numCols) * __gapXScale);
+				else
+					_posX += round((_widget.__width + __gapX) * __gapXScale);
+			}
+			
+			_posY += round((_rowSize.height + __gapY) * __gapYScale);
+		}
+		
+		__width += __paddingX * 2;
+		__height += __paddingY * 2;
+		
+		__dimensionsDirty = false;
+	}

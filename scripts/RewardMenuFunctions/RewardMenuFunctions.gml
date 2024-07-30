@@ -20,7 +20,7 @@ function RewardMenuQueueRewards(_rewards) {
 			[MenuText("Select something!")],
 			_rewardWidgets,
 			_rewardTypes
-		], sWindowBG).UniformWidth([false, true, true]).Gap(6, 6).Padding(10, 6).Align(fa_center, fa_middle);
+		], sWindowBG).UniformWidth([false, true, true]).Gap(6, 6).Padding(12, 6).Align(fa_center, fa_middle);
 		array_push(menus, _menu);
 	}
 }
