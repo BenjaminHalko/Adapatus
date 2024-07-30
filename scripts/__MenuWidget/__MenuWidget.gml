@@ -44,6 +44,8 @@ function __MenuWidget() constructor {
 		return self;
 	}
 	
+	
+	
 	Step = function(){};
 	Draw = function(){};
 }

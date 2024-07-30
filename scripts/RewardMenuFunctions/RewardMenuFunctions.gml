@@ -8,34 +8,19 @@ function RewardMenuQueueRewards(_rewards) {
 		instance_create_layer(0, 0, "GUI", oRewardMenu);
 	
 	with (oRewardMenu) {
-		var _rewardQueue = [];
-		textboxWidth = 0;
-		textboxHeight = 0;
-		textboxMinWidth = 0;
+		var _rewardWidgets = array_create(_rewardNum);
+		var _rewardTypes = array_create(_rewardNum);
 		
-		for (var i = 0; i < _rewardNum; i++) {
-			var _info = _rewards[i];	
-			var _window = ElementRewardWindow(_info[0], _info[1]);
-			textboxHeight = max(textboxHeight, _window.__height);
-			textboxMinWidth = max(textboxMinWidth, _window.__width);
-			textboxWidth += _window.__width;
+		for(var i = 0; i < _rewardNum; i++) {
+			_rewardWidgets[i] = ElementRewardWindow(_rewards[i][0], _rewards[i][1]);
+			_rewardTypes[i] = MenuText("Common");
+		}
 			
-			array_push(_rewardQueue, _window);
-		}
-		
-		textboxWidth += (_rewardNum - 1) * itemSpacing;
-		
-		var _x = - textboxWidth / 2;
-		for (var i = 0; i < _rewardNum; i++) {
-			_x += _rewardQueue[i].__width / 2;
-			_rewardQueue[i].Pos(ResWidth/2 + _x, ResHeight / 2);
-			_x += _rewardQueue[i].__width / 2 + itemSpacing;
-		}
-		
-		textboxWidth += textboxMarginX * 2;
-		textboxMinWidth += textboxMarginX * 2;
-		textboxHeight += textboxMarginY * 2;
-		
-		array_push(choiceQueue, _rewardQueue);
+		var _menu = MenuContainer([
+			[MenuText("Select something!")],
+			_rewardWidgets,
+			_rewardTypes
+		], sWindowBG).UniformWidth([false, true, true]).Gap(6, 6).Padding(10, 6).Align(fa_center, fa_middle);
+		array_push(menus, _menu);
 	}
 }

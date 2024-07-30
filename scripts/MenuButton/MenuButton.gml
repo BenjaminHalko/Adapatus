@@ -35,8 +35,8 @@ function MenuButton(_sprite) : __MenuWidget() constructor {
 	}
 	
 	static DrawButton = function() {
-		var _xScale = __xScale * __width / __baseWidth;
-		var _yScale = __yScale * __height / __baseHeight;
+		var _xScale = round(__xScale * __width) / __baseWidth;
+		var _yScale = round(__yScale * __height) / __baseHeight;
 		if (__isHovered) {
 			var _borderAlpha = max(0, __alpha * 2 - 1);
 			
@@ -59,8 +59,4 @@ function MenuButton(_sprite) : __MenuWidget() constructor {
 	// Config for later
 	__onClick = function(){};
 	__onClickArgs = [];
-	
-	// Default Config
-	Step = CheckIfHovered;
-	Draw = DrawButton;
 }

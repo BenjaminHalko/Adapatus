@@ -31,6 +31,8 @@ function __ElementToolbarWindow(_element, _sprite) : MenuButton(_sprite) constru
 	__previouslyHovered = false;
 	__animateYScale = true;
 	
+	__textOffsetY = sprite_get_bbox_top(__sprite);
+	
 	// Offset BBox
 	__bboxRight = 3;
 	
@@ -54,14 +56,17 @@ function __ElementToolbarWindow(_element, _sprite) : MenuButton(_sprite) constru
 		}
 	}
 	
-	Draw = function(_showElement, _quantity) {
+	/// @param	{bool} showElement
+	/// @param	{real} quantity
+	static DrawElement = function(_showElement, _quantity) {
 		var _extraY = __height * (__yScale - 1);
+		var _textOffset = -__yOffset + __textOffsetY - 5;
 		
 		DrawButton();
-		ScribbleExt(__name).blend(c_white, __alpha).draw(__x - __xOffset + 4, __y - 40 - 3 - _extraY);
+		ScribbleExt(__name).blend(c_white, __alpha).draw(__x - __xOffset + 4, __y + _textOffset - _extraY);
 		
 		var _x = __x - __xOffset + __width / 2 - __elementXOffset;
-		var _y = __y - 40 + __elementYOffset + 25;
+		var _y = __y + _textOffset + __elementYOffset + 28;
 	
 		if (_showElement) {
 			draw_sprite_ext(__elementSprite, 0, _x + 2, _y + 2 - round(_extraY / 2 - sin(__burstEffect * pi) * 2), 1, 1, 0, c_black, __alpha);
@@ -84,4 +89,7 @@ function __ElementToolbarWindow(_element, _sprite) : MenuButton(_sprite) constru
 			_text.blend(c_white, __alpha).draw(_textX, _textY);
 		}
 	}
+	
+	Step = CheckIfHovered;
+	Draw = DrawElement;
 }
