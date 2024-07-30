@@ -253,6 +253,7 @@
     {"id":{"name":"sRewardElement","path":"sprites/sRewardElement/sRewardElement.yy",},},
     {"id":{"name":"sRewardElementPlus","path":"sprites/sRewardElementPlus/sRewardElementPlus.yy",},},
     {"id":{"name":"sRewardElementPlusPlus","path":"sprites/sRewardElementPlusPlus/sRewardElementPlusPlus.yy",},},
+    {"id":{"name":"sRewardRarityLabel","path":"sprites/sRewardRarityLabel/sRewardRarityLabel.yy",},},
     {"id":{"name":"sSpike","path":"sprites/sSpike/sSpike.yy",},},
     {"id":{"name":"sToolbar","path":"sprites/sToolbar/sToolbar.yy",},},
     {"id":{"name":"sToolbarElement","path":"sprites/sToolbarElement/sToolbarElement.yy",},},
