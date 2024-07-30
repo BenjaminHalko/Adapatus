@@ -42,7 +42,7 @@
     ],
     "top":18,
   },
-  "origin":9,
+  "origin":3,
   "parent":{
     "name":"Sprites",
     "path":"folders/GUI/Reward Menu/Sprites.yy",
@@ -95,7 +95,7 @@
     "visibleRange":null,
     "volume":1.0,
     "xorigin":0,
-    "yorigin":8,
+    "yorigin":25,
   },
   "swatchColours":null,
   "swfPrecision":0.5,

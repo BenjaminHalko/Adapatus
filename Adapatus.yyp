@@ -75,6 +75,7 @@
   },
   "name":"Adapatus",
   "resources":[
+    {"id":{"name":"RewardWindowCurves","path":"animcurves/RewardWindowCurves/RewardWindowCurves.yy",},},
     {"id":{"name":"native_cursor","path":"extensions/native_cursor/native_cursor.yy",},},
     {"id":{"name":"fFont","path":"fonts/fFont/fFont.yy",},},
     {"id":{"name":"scribble_fallback_font","path":"fonts/scribble_fallback_font/scribble_fallback_font.yy",},},

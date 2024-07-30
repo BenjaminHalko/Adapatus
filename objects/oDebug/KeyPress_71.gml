@@ -2,7 +2,7 @@
 
 if (global.gameState == GameState.IDLE) {
 	RewardMenuQueueRewards([
-		[ELEMENT.BOX, 2],
+		[ELEMENT.WHEEL, 2],
 		[ELEMENT.LONG_BOX, 8],
 		[ELEMENT.MOTORIZED_WHEEL, 4],
 	]);

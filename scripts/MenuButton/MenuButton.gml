@@ -16,6 +16,7 @@ function MenuButton(_sprite) : __MenuWidget() constructor {
 	
 	// More Calculations
 	__isHovered = false;
+	__fixScale = true;
 	
 	static CheckIfHovered = function() {
 		var _mx = MouseGUIX();
@@ -35,8 +36,9 @@ function MenuButton(_sprite) : __MenuWidget() constructor {
 	}
 	
 	static DrawButton = function() {
-		var _xScale = round(__xScale * __width) / __baseWidth;
-		var _yScale = round(__yScale * __height) / __baseHeight;
+		var _fixScaleAmount = __fixScale ? 2 : 1;
+		var _xScale = round(__xScale * __width / _fixScaleAmount) * _fixScaleAmount / __baseWidth;
+		var _yScale = round(__yScale * __height / _fixScaleAmount) * _fixScaleAmount / __baseHeight;
 		if (__isHovered) {
 			var _borderAlpha = max(0, __alpha * 2 - 1);
 			
