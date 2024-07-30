@@ -29,10 +29,10 @@
     "guideColour":[4294902015,4294902015,4294902015,4294902015,],
     "highlightColour":1728023040,
     "highlightStyle":0,
-    "left":2,
+    "left":3,
     "resourceType":"GMNineSliceData",
     "resourceVersion":"2.0",
-    "right":4,
+    "right":3,
     "tileMode":[
       0,
       0,
@@ -40,7 +40,7 @@
       0,
       0,
     ],
-    "top":14,
+    "top":18,
   },
   "origin":6,
   "parent":{
@@ -105,5 +105,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":40,
+  "width":58,
 }
