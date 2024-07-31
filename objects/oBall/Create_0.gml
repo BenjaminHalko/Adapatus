@@ -4,3 +4,4 @@
 event_inherited();
 
 bindPercent = 0;
+isBound = false;

@@ -51,6 +51,8 @@ function SimulationReset() {
 	
 	with(pElement)
 		event_user(0);
+		
+	GoalsOnSimulationReset();
 }
 
 /// @desc	This is a configuration for an element, used to map 

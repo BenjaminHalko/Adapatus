@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"GoalFunctions",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"GoalFunctions",
+  "parent":{
+    "name":"Goals",
+    "path":"folders/Simulation/Goals.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

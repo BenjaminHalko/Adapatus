@@ -4,7 +4,7 @@ EnableLive;
 
 // DEBUG
 if (global.gameState == GameState.SIMULATION) {
-	testingTimer += 1/60;	
+	testingTimer += 1/60;
 }
 
 
@@ -31,4 +31,10 @@ if (global.gameState == GameState.IDLE) {
 			break;
 		}	
 	}
+}
+
+
+// Check for goals
+if (global.gameState == GameState.SIMULATION) {
+		
 }

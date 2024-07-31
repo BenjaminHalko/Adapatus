@@ -57,3 +57,28 @@ function SortElementArray(_elements) {
 		return _prioritySort;
 	});
 }
+
+/// @desc	Selects a random level data pos of an element type
+/// @param	{Asset.GMObject} element
+/// @retrun	{real}
+function SelectRandomElement(_element) {
+	var _possiblePositions = [];
+	for(var i = 0; i < array_length(global.placedElements); i++) {
+		if (global.placedElements[i].type == _element)
+			array_push(_possiblePositions, i);
+	}
+	var _numPositions = array_length(_possiblePositions);
+	return _possiblePositions[irandom(_numPositions - 1)];
+}
+
+/// @desc	Gets the id of an element object based on level data pos
+/// @param	{real} levelDataPos
+/// @return	{Id.Instance}
+function GetElementID(_levelDataPos) {
+	with(pElement) {
+		if (_levelDataPos == levelDataPos)
+			return id;
+	}
+	
+	return noone;
+}

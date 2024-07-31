@@ -4,6 +4,7 @@ globalvar levelData;
 /// @param	{string} filename
 function LoadLevel(_filename) {
 	levelData = new LevelSaveData(_filename);
+	
 	ReloadLevel();
 }
 
@@ -19,7 +20,10 @@ function ReloadLevel() {
 			show_debug_message(_e);	
 		}
 	}
+	
+	
 	SimulationReset();
+	
 	
 	Notification($"Loaded Level: {levelData.savefile}");
 }
