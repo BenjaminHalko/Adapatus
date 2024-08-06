@@ -6,11 +6,13 @@ enum ELEMENT {
 	LONG_BOX,
 	MOTORIZED_WHEEL,
 	CRATE,
+	ROPE,
 	
 	MAX
 }
 
 global.elementSortList = [
+	ELEMENT.ROPE,
 	ELEMENT.WHEEL,
 	ELEMENT.MOTORIZED_WHEEL,
 	ELEMENT.BOX,
@@ -28,3 +30,4 @@ global.elementConfigList[ELEMENT.SPIKE] =			new ElementTypeConfig(oSpike, "Spike
 global.elementConfigList[ELEMENT.LONG_BOX] =		new ElementTypeConfig(oLongBox, "Long Box");
 global.elementConfigList[ELEMENT.MOTORIZED_WHEEL] =	new ElementTypeConfig(oMotorizedBall, "Motor Wheel");
 global.elementConfigList[ELEMENT.CRATE] =			new ElementTypeConfig(oCrate, "Crate");
+global.elementConfigList[ELEMENT.ROPE] =			new ElementTypeConfig(oRopePlacable, "Rope");
