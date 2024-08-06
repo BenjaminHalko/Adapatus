@@ -1,7 +1,9 @@
 {
   "$GMObject":"",
   "%Name":"oRope",
-  "eventList":[],
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
   "name":"oRope",
   "overriddenProperties":[],
@@ -15,7 +17,7 @@
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
-  "physicsDensity":0.5,
+  "physicsDensity":0.1,
   "physicsFriction":0.2,
   "physicsGroup":1,
   "physicsKinematic":false,
