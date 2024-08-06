@@ -9,7 +9,10 @@
     "name":"Rope",
     "path":"folders/Elements/Rope.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"pElement",
+    "path":"objects/pElement/pElement.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -27,7 +30,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"sRopePlaceable",
+    "path":"sprites/sRopePlaceable/sRopePlaceable.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }
