@@ -25,6 +25,13 @@ function SimulationStart() {
 			event_user(1);
 	}
 	
+	_array = [];
+	with(pElement)
+		array_push(_array, id);
+	array_sort(_array, function(_a, _b) {
+		return (_a.levelDataPos - _b.levelDataPos) + (_b.priority - _a.priority) * array_length(global.placedElements);
+	});
+	
 	for(var i = 0; i < array_length(_array); i++)
 		_array[i].phy_active = true;
 }
