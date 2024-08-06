@@ -5,7 +5,8 @@ function Goal_ElementInCrate() : __GoalConfig() constructor {
 	
 	__setup = function() {
 		__targetElement = new ElementGoal(SelectRandomElement(ELEMENT.CRATE));
-		array_push(__subElements, new ElementGoal(0));
+		
+		
 	}
 	
 	__onReset = function() {

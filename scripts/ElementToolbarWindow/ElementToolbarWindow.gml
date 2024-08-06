@@ -70,7 +70,7 @@ function __ElementToolbarWindow(_element, _sprite) : MenuButton(_sprite) constru
 		var _x = __x - __xOffset + __width / 2 - __elementXOffset;
 		var _y = __y + _textOffset + __elementYOffset + 28;
 	
-		if (_showElement) {
+		if (_showElement and _quantity > 0) {
 			draw_sprite_ext(__elementSprite, 0, _x + 2, _y + 2 - round(_extraY / 2 - sin(__burstEffect * pi) * 2), 1, 1, 0, c_black, __alpha);
 			draw_sprite_ext(__elementSprite, 0, _x, _y - round(_extraY / 2  + sin(__burstEffect * pi) * 3), 1, 1, 0, c_white, __alpha);
 		}
@@ -78,7 +78,7 @@ function __ElementToolbarWindow(_element, _sprite) : MenuButton(_sprite) constru
 		if (!is_infinity(_quantity)) {
 			var _text = ScribbleExt($"x{_quantity}").align(fa_center, fa_middle);
 			var _textX = _x + max(8, __elementWidth / 2);
-			var _textY = _y + 6 - __elementYOffset - round(_extraY / 4);
+			var _textY = _y + 6 - __elementYOffset - round(_extraY / 2);
 	
 			_text.blend(c_black, __alpha).draw(_textX+1, _textY-1);
 			_text.draw(_textX+1, _textY+1);
