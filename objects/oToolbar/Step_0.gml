@@ -51,6 +51,7 @@ for(var i = 0; i < array_length(usableElements); i++) {
 if (elementHovered != -1 and elementInHand == noone and global.gameState == GameState.IDLE) {
 	if (mouse_check_button_pressed(mb_left)) {
 		global.gameState = GameState.EDITING_ELEMENT;
+		global.editorTool = EDITOR_TOOL.MOVE;
 		global.elementInteracting = AddElement(usableElements[elementHovered].__type, mouse_x, mouse_y, 0);
 		global.elementInteracting.isHovered = true;
 		global.elementInteracting.dragXOffset = 0;

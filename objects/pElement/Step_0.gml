@@ -54,5 +54,8 @@ if (global.elementInteracting == noone) {
 				EditElement(id);
 			}
 		break;
+		default:
+			global.elementInteracting = noone;
+		break;
 	}
 }

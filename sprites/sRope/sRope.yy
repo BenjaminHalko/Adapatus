@@ -4,7 +4,7 @@
   "bboxMode":0,
   "bbox_bottom":1,
   "bbox_left":0,
-  "bbox_right":3,
+  "bbox_right":1,
   "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -42,7 +42,7 @@
     ],
     "top":0,
   },
-  "origin":5,
+  "origin":4,
   "parent":{
     "name":"Rope",
     "path":"folders/Elements/Rope.yy",
@@ -94,7 +94,7 @@
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":4,
+    "xorigin":1,
     "yorigin":1,
   },
   "swatchColours":null,
@@ -105,5 +105,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":4,
+  "width":2,
 }

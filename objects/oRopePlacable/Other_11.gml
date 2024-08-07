@@ -1,22 +1,30 @@
 /// @desc Create rope objects
 
+var _density = 0.5;
+var _widthHalf = 1;
+
 var _dir = 0;
 var _len = 500;
 
 var _previous = noone;
-for(var i = 0; i < _len; i += 3) {
+for(var i = 0; i < _len; i += _widthHalf * 2) {
 	var _rope = instance_create_depth(
-		x + lengthdir_x(i, _dir),
-		y + lengthdir_y(i, _dir),
+		x + lengthdir_x(i+_widthHalf, _dir),
+		y + lengthdir_y(i+_widthHalf, _dir),
 		depth,
 		oRope
 	);
 	
-	if (instance_exists(_previous)) {
-		physics_joint_wheel_create(_previous, _rope, _rope.x, _rope.y, 0, 0, false, 0, 0, 20, 1, false);
-		//var _joint = physics_joint_distance_create(_previous, _rope, _previous.x, _previous.y, _rope.x, _rope.y, false);
-		//physics_joint_set_value(_joint, phy_joint_damping_ratio, 0);
-		//physics_joint_set_value(_joint, phy_joint_frequency, 20);
+	with (_rope) {
+		image_angle = _dir;
+		if (instance_exists(_previous)) {
+			joints = [
+				physics_joint_revolute_create(id, _previous, x - lengthdir_x(_widthHalf, _dir), y - lengthdir_y(_widthHalf, _dir), 0, 0, 0, 0, 0, 0, 0),
+				physics_joint_distance_create(id, _previous, x, y, _previous.x, _previous.y, false)
+			];
+			_previous.nextObject = id;
+			previousObject = _previous;
+		}
 	}
 	
 	_previous = _rope;
