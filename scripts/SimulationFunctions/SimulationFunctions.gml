@@ -60,6 +60,7 @@ function SimulationReset() {
 		event_user(0);
 		
 	GoalsOnSimulationReset();
+	CollectAllSnaps();
 }
 
 /// @desc	This is a configuration for an element, used to map 

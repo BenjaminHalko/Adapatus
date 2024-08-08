@@ -14,6 +14,7 @@ function AddElement(_type, _x, _y, _rotation) {
 		isUnlocked = _params.isUnlocked;
 	}
 	array_push(global.placedElements, _params);
+	CollectAllSnaps();
 	return _elementID;
 }
 
@@ -45,6 +46,7 @@ function DeleteElement(_id) {
 	AddUsableElement(_type);
 	array_delete(global.placedElements, _id.levelDataPos, 1);
 	instance_destroy(_id);
+	CollectAllSnaps();
 }
 
 /// @desc	Sorts a list of elements

@@ -242,6 +242,7 @@
     {"id":{"name":"scribble","path":"scripts/scribble/scribble.yy",},},
     {"id":{"name":"ShaderUniforms","path":"scripts/ShaderUniforms/ShaderUniforms.yy",},},
     {"id":{"name":"SimulationFunctions","path":"scripts/SimulationFunctions/SimulationFunctions.yy",},},
+    {"id":{"name":"SnapSystem","path":"scripts/SnapSystem/SnapSystem.yy",},},
     {"id":{"name":"string_height_scribble_ext","path":"scripts/string_height_scribble_ext/string_height_scribble_ext.yy",},},
     {"id":{"name":"string_height_scribble","path":"scripts/string_height_scribble/string_height_scribble.yy",},},
     {"id":{"name":"string_length_scribble","path":"scripts/string_length_scribble/string_length_scribble.yy",},},

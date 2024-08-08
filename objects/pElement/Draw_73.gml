@@ -33,5 +33,6 @@ if (!global.drawPhysicsDebug) {
 	if (global.elementInteracting != id)
 		draw_self();
 } else {
+	draw_set_color(c_white);
 	physics_draw_debug();
 }

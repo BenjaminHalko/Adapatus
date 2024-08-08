@@ -36,8 +36,28 @@ if (global.elementInteracting == noone) {
 	isHovered = true;
 	switch (global.editorTool) {
 		case EDITOR_TOOL.MOVE:
-			phy_position_x = round(mouse_x - dragXOffset);
-			phy_position_y = round(mouse_y - dragYOffset);	
+			var _mx = round(mouse_x - dragXOffset);
+			var _my = round(mouse_y - dragYOffset);
+			
+			if (lastDragPositionX != _mx or lastDragPositionY != _my) {
+				lastDragPositionX = _mx;
+				lastDragPositionY = _my;
+				
+				var _snap = SnapToPoint(_mx, _my);
+				if (!is_undefined(_snap)) {
+					phy_position_x = round(_snap.x);
+					phy_position_y = round(_snap.y);
+				
+					if (is_instanceof(_snap.snap, __SnapLine)) {
+						var _pos = _snap.snap.GetPos();
+						var _dir = point_direction(_pos.x1, _pos.y1, _pos.x2, _pos.y2);
+						phy_rotation = -_dir;
+					}
+				} else {
+					phy_position_x = round(_mx);
+					phy_position_y = round(_my);
+				}
+			}
 	
 			if (!mouse_check_button(mb_left)) {
 				global.elementInteracting = noone;

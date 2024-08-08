@@ -12,3 +12,11 @@ isHovered = false;
 dragXOffset = 0;
 dragYOffset = 0;
 dragRotationOffset = 0;
+lastDragPositionX = 0;
+lastDragPositionY = 0;
+
+// Joints
+joints = [];
+
+// Snaps
+snapPoints = [];
