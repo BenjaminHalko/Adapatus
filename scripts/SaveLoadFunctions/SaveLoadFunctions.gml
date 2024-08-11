@@ -15,15 +15,14 @@ function ReloadLevel() {
 	for(var i = 0; i < array_length(levelData.elements); i++) {
 		try {
 			var _info = levelData.elements[i];
-			array_push(global.placedElements, new ElementParams(_info.type, _info.x, _info.y, _info.rotation, false));
+			var _params = new ElementParams(_info, false);
+			array_push(global.placedElements, _params);
 		} catch(_e) {
 			show_debug_message(_e);	
 		}
 	}
 	
-	
 	SimulationReset();
-	
 	
 	Notification($"Loaded Level: {levelData.savefile}");
 }

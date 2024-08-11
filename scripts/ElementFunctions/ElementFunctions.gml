@@ -5,11 +5,17 @@
 /// @param	{real} rotation
 /// @return	{Id.Instance}
 function AddElement(_type, _x, _y, _rotation) {
-	var _params = new ElementParams(_type, _x, _y, _rotation, !global.inLevelEditor);
-	var _elementID = instance_create_layer(_x, _y, "Entities", global.elementConfigList[_type].object, {
+	var _params = new ElementParams({
+		type: _type,
+		x: _x,
+		y: _y,
+		rotation: _rotation
+	}, !global.inLevelEditor);
+	var _vars = {
 		phy_active: false,
 		phy_rotation: _rotation
-	});
+	};
+	var _elementID = instance_create_layer(_x, _y, "Entities", global.elementConfigList[_type].object, _vars);
 	with(_elementID) {
 		isUnlocked = _params.isUnlocked;
 	}
@@ -29,6 +35,12 @@ function EditElement(_id) {
 		_params.y = round(phy_position_y);
 		_params.rotation = round(phy_rotation);
 		_params.isUnlocked = isUnlocked;
+		var _extraData = global.elementConfigList[_params.type].extraData;
+		if (!is_undefined(_extraData)) {
+			for (var i = 0; i < array_length(_extraData); i++) {
+				_params[$ _extraData[i]] = variable_instance_get(id, _extraData[i]);
+			}
+		}
 	}
 }
 
@@ -45,6 +57,7 @@ function DeleteElement(_id) {
 	global.elementQuantity[$ _type]++;
 	AddUsableElement(_type);
 	array_delete(global.placedElements, _id.levelDataPos, 1);
+	_id.levelDataPos = -1;
 	instance_destroy(_id);
 	CollectAllSnaps();
 }

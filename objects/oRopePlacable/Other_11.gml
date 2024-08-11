@@ -3,8 +3,8 @@
 var _density = 0.5;
 var _widthHalf = 1;
 
-var _dir = 0;
-var _len = 500;
+var _dir = point_direction(x, y, x2, y2);
+var _len = point_distance(x, y, x2, y2);
 
 var _previous = noone;
 for(var i = 0; i < _len; i += _widthHalf * 2) {

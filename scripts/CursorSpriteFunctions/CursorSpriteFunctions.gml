@@ -48,7 +48,6 @@ function CreateCursors() {
 		surface_set_target(_surf);
 		shader_set(shColorPalette);
 		shader_set_uniform_f_array(global.uColorPaletteColors, global.colorPaletteColors[global.colorPalette]);
-		shader_set_uniform_f(global.uColorPaletteInvert, global.colorPaletteInvert);
 		draw_sprite_ext(global.cursorSprites[i],0,_spriteXOffset,_spriteYOffset,_size,_size,0,c_white,1);
 		shader_reset();
 		surface_reset_target();

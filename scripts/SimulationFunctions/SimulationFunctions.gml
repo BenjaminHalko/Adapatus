@@ -45,14 +45,19 @@ function SimulationReset() {
 	
 	for (var i = 0; i < array_length(global.placedElements); i++) {
 		var _params = global.placedElements[i];
-		with(instance_create_layer(_params.x, _params.y, "Entities", global.elementConfigList[_params.type].object, {
+		var _vars = {
 			phy_active: false,
-			image_angle: _params.rotation,
 			phy_rotation: _params.rotation
-		})) {
+		};
+		var _extraData = global.elementConfigList[_params.type].extraData;
+		if (!is_undefined(_extraData)) {
+			for (var j = 0; j < array_length(_extraData); j++) {
+				_vars[$ _extraData[j]] = _params[$ _extraData[j]];
+			}
+		}
+		with(instance_create_layer(_params.x, _params.y, "Entities", global.elementConfigList[_params.type].object, _vars)) {
 			isUnlocked = _params.isUnlocked;
 			levelDataPos = i;
-			image_angle = _params.rotation;
 		}
 	}
 	
@@ -66,21 +71,29 @@ function SimulationReset() {
 /// @desc	This is a configuration for an element, used to map 
 /// @param	{Asset.GMObject} object
 /// @param	{string} name
-function ElementTypeConfig(_object, _name) constructor {
+/// @param	{array<string>} [extraData]
+function ElementTypeConfig(_object, _name, _extraData=undefined) constructor {
 	object = _object;
 	name = _name;
+	extraData = _extraData;
 }
 
 /// @desc	This is a entry for an element
-/// @param	{enum.ELEMENT_TYPE} type
-/// @param	{real} x
-/// @param	{real} y
-/// @param	{real} rotation
+/// @param	{struct} params
 /// @param	{bool} isUnlocked
-function ElementParams(_type, _x, _y, _rotation, _isUnlocked) constructor {
-	type = _type;
-	x = _x;
-	y = _y;
-	rotation = _rotation;
+function ElementParams(_params, _isUnlocked) constructor {
+	type = _params.type;
+	x = _params.x;
+	y = _params.y;
+	rotation = _params.rotation;
 	isUnlocked = _isUnlocked;
+	
+	var _extraData = global.elementConfigList[type].extraData;
+	if (!is_undefined(_extraData)) {
+		for (var i = 0; i < array_length(_extraData); i++) {
+			if (!struct_exists(_params, _extraData[i]))
+				continue;
+			struct_set(self, _extraData[i], _params[$ _extraData[i]]);
+		}
+	}
 }

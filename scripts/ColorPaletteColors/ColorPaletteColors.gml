@@ -13,8 +13,7 @@ enum PALETTE {
 	GREYSCALE // MAKE SURE THIS IS LAST, OR ELSE DEBUGGING WILL BREAK
 }
 
-global.colorPalette = PALETTE.HC_BLUE;
-global.colorPaletteInvert = false;
+global.colorPalette = PALETTE.BEACH;
 global.colorPaletteColors = {};
 
 global.colorPaletteColors[PALETTE.GAMEBOY] =

@@ -19,7 +19,6 @@ instance_create_layer(0, 0, layer, oCamera);
 // Set Cursor
 CreateCursors();
 cursorPalette = global.colorPalette;
-cursorInvert = global.colorPaletteInvert;
 cursorSize = CursorSize;
 
 // Initializes Scribble

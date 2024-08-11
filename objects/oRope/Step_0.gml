@@ -5,7 +5,7 @@ event_inherited();
 
 if (global.gameState == GameState.SIMULATION) {
 	if (instance_exists(previousObject)) {
-		if (point_distance(x, y, previousObject.x, previousObject.y) > 4) {
+		if (array_length(joints) == 2 and point_distance(x, y, previousObject.x, previousObject.y) > 4) {
 			breakTimer++;
 			if (breakTimer > 15) {
 				physics_joint_delete(joints[0]);

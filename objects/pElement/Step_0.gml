@@ -12,12 +12,14 @@ if (global.elementInteracting == noone) {
 			dragYOffset = mouse_y - y;
 			isHovered = false;
 			global.editorTool = EDITOR_TOOL.MOVE;
+			global.gameState = GameState.EDITING_ELEMENT;
 		}
 		
 		if (mouse_check_button_pressed(mb_right)) {
 			global.elementInteracting = id;
 			isHovered = false;
 			global.editorTool = EDITOR_TOOL.ROTATE;
+			global.gameState = GameState.EDITING_ELEMENT;
 		}
 		
 		if (keyboard_check_pressed(vk_backspace)) {
@@ -59,7 +61,7 @@ if (global.elementInteracting == noone) {
 				}
 			}
 	
-			if (!mouse_check_button(mb_left)) {
+			if (mouse_check_button_released(mb_left)) {
 				global.elementInteracting = noone;
 				global.gameState = GameState.IDLE;
 				EditElement(id);

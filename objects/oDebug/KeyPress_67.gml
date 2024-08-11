@@ -1,5 +1,5 @@
 /// @desc Clear Screen
 
 instance_destroy(pElement);
-levelData.elements = [];
+global.placedElements = [];
 Notification("Clear Screen");
