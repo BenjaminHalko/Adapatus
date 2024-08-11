@@ -287,6 +287,7 @@
     {"id":{"name":"sRewardElementPlusPlus","path":"sprites/sRewardElementPlusPlus/sRewardElementPlusPlus.yy",},},
     {"id":{"name":"sRewardRarityLabel","path":"sprites/sRewardRarityLabel/sRewardRarityLabel.yy",},},
     {"id":{"name":"sRope","path":"sprites/sRope/sRope.yy",},},
+    {"id":{"name":"sRopePlaceable_Copy","path":"sprites/sRopePlaceable_Copy/sRopePlaceable_Copy.yy",},},
     {"id":{"name":"sRopePlaceable","path":"sprites/sRopePlaceable/sRopePlaceable.yy",},},
     {"id":{"name":"sSpike","path":"sprites/sSpike/sSpike.yy",},},
     {"id":{"name":"sSpring","path":"sprites/sSpring/sSpring.yy",},},
