@@ -45,7 +45,7 @@ if (global.elementInteracting == noone) {
 				lastDragPositionX = _mx;
 				lastDragPositionY = _my;
 				
-				var _snap = SnapToPoint(_mx, _my);
+				var _snap = SnapToPoint(mouse_x, mouse_y);
 				if (!is_undefined(_snap)) {
 					phy_position_x = round(_snap.x);
 					phy_position_y = round(_snap.y);

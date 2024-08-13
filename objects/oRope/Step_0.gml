@@ -4,12 +4,13 @@
 event_inherited();
 
 if (global.gameState == GameState.SIMULATION) {
-	if (instance_exists(previousObject)) {
-		if (array_length(joints) == 2 and point_distance(x, y, previousObject.x, previousObject.y) > 4) {
+	var _object = joints[0].boundElement;
+	if (instance_exists(_object)) {
+		if (point_distance(x, y, _object.x, _object.y) > 4 and false) {
 			breakTimer++;
 			if (breakTimer > 15) {
-				physics_joint_delete(joints[0]);
-				physics_joint_delete(joints[1]);
+				joints[0].Destroy();
+				joints[1].Destroy();
 				previousObject = noone;
 			}
 		} else {

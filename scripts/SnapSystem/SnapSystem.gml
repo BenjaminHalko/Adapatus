@@ -29,7 +29,7 @@ function __SnapPoint(_x, _y) constructor {
 	/// @return	{bool}
 	static CanSnap = function(_x, _y) {
 		var _pos = GetPos();
-		return point_distance(_x, _y, _pos.x, _pos.y) < SNAP_DIST + 4;
+		return point_distance(_x, _y, _pos.x, _pos.y) < SNAP_DIST;
 	}
 	
 	/// @return	{struct}
@@ -162,6 +162,7 @@ function CollectAllSnaps() {
                             _line2.__x1, _line2.__y1, _line2.__x2, _line2.__y2
                         );
                         if (!is_undefined(_intersection)) {
+							_intersection.__parent = _line1.__parent;
                             array_push(global.snapList, _intersection);
                         }
                     }
@@ -171,7 +172,7 @@ function CollectAllSnaps() {
     }
 	
 	array_sort(global.snapList, function(_a, _b) {
-		return is_instanceof(_b, SnapPoint) - is_instanceof(_a, SnapPoint);
+		return is_instanceof(_b, __SnapPoint) - is_instanceof(_a, __SnapPoint);
 	});
 }
 
@@ -185,6 +186,9 @@ function SnapToPoint(_x, _y) {
 		if (!_snap.CanSnap(_x, _y))
 			continue;
 			
+		if (_snap.__parent == id)
+			continue;
+				
 		var _pos = _snap.Snap(_x, _y);
 		
 		return {

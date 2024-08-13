@@ -97,3 +97,17 @@ function GetElementID(_levelDataPos) {
 	
 	return noone;
 }
+
+/// @desc	Gets a list of elements overlapping a point
+/// @param	{real} x
+/// @param	{real} y
+/// @return	{array<Any*>}
+function GetOverlappingElements(_x, _y) {
+	var _list = ds_list_create();
+	var _num = collision_rectangle_list(_x-1, _y-1, _x+1, _y+1, pElement, true, true, _list, true);
+	var _array = array_create(_num);
+	for(var i = 0; i < _num; i++)
+		_array[i] = _list[| i];
+	ds_list_destroy(_list);
+	return _array;
+}

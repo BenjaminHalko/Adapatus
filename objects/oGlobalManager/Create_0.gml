@@ -24,5 +24,8 @@ cursorSize = CursorSize;
 // Initializes Scribble
 ScribbleConfig();
 
+// Debug
+global.frameNumber = 0;
+
 // Go to the next room
 room_goto_next();

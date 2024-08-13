@@ -1,7 +1,9 @@
 {
   "$GMObject":"",
   "%Name":"oBalloon",
-  "eventList":[],
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
   "name":"oBalloon",
   "overriddenProperties":[],
@@ -9,7 +11,10 @@
     "name":"Balloon",
     "path":"folders/Elements/Balloon.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"pElement",
+    "path":"objects/pElement/pElement.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -17,7 +22,7 @@
   "physicsGroup":1,
   "physicsKinematic":false,
   "physicsLinearDamping":0.1,
-  "physicsObject":false,
+  "physicsObject":true,
   "physicsRestitution":0.1,
   "physicsSensor":false,
   "physicsShape":1,

@@ -34,15 +34,20 @@ function SimulationStart() {
 	
 	for(var i = 0; i < array_length(_array); i++)
 		_array[i].phy_active = true;
+		
+	PrintObjectProperties();
 }
+
+global.__tempElementList = "";
 
 /// @desc	Resets the simulation back to its initial state
 function SimulationReset() {
 	EnableLive;
 	
-	global.gameState = GameState.IDLE;
+	global.gameState = GameState.SIMULATION_RESETTING;
 	instance_destroy(pElement);
 	
+	global.gameState = GameState.IDLE;
 	for (var i = 0; i < array_length(global.placedElements); i++) {
 		var _params = global.placedElements[i];
 		var _vars = {

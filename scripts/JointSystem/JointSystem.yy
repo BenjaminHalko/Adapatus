@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"JointSystem",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"JointSystem",
+  "parent":{
+    "name":"Elements",
+    "path":"folders/Elements.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
