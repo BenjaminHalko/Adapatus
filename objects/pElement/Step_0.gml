@@ -61,7 +61,7 @@ if (global.elementInteracting == noone) {
 				}
 			}
 	
-			if (mouse_check_button_released(mb_left)) {
+			if (mouse_check_button_pressed(mb_left)) {
 				global.elementInteracting = noone;
 				global.gameState = GameState.IDLE;
 				EditElement(id);
@@ -70,7 +70,7 @@ if (global.elementInteracting == noone) {
 		case EDITOR_TOOL.ROTATE:
 			phy_rotation = round(round(-point_direction(x, y, mouse_x, mouse_y)/360*24) * (360/24));
 			
-			if (!mouse_check_button(mb_right)) {
+			if (mouse_check_button_pressed(mb_right)) {
 				global.elementInteracting = noone;
 				global.gameState = GameState.IDLE;
 				EditElement(id);

@@ -7,8 +7,13 @@ global.inLevelEditor = false;
 global.elementQuantity = {};
 global.placedElements = [];
 
-/// @desc	Starts the simulation by activating physics
 function SimulationStart() {
+	global.gameState = GameState.SIMULATION_RESETTING;
+	room_restart();
+}
+
+/// @desc	Starts the simulation by activating physics
+function __SimulationStart() {
 	global.gameState = GameState.SIMULATION;
 	oSimulationManager.testingTimer = 0;
 	
@@ -34,11 +39,7 @@ function SimulationStart() {
 	
 	for(var i = 0; i < array_length(_array); i++)
 		_array[i].phy_active = true;
-		
-	PrintObjectProperties();
 }
-
-global.__tempElementList = "";
 
 /// @desc	Resets the simulation back to its initial state
 function SimulationReset() {

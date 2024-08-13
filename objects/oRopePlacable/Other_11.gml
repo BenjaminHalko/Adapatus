@@ -17,6 +17,7 @@ for(var i = 0; i < _len; i += _widthHalf * 2) {
 	
 	with (_rope) {
 		image_angle = _dir;
+		phy_rotation = _dir;
 		if (instance_exists(_previous)) {
 			ApplyJoint(id, _previous, physics_joint_revolute_create(id, _previous, x - lengthdir_x(_widthHalf, _dir), y - lengthdir_y(_widthHalf, _dir), 0, 0, 0, 0, 0, 0, 0));
 			ApplyJoint(id, _previous, physics_joint_distance_create(id, _previous, x, y, _previous.x, _previous.y, false));

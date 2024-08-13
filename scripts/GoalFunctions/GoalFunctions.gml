@@ -1,5 +1,5 @@
 global.goals = [
-	new Goal_ElementInCrate()
+	//new Goal_ElementInCrate()
 ];
 
 function NextRound() {

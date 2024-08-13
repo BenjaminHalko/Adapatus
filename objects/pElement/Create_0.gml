@@ -2,6 +2,8 @@
 
 EnableLive;
 
+persistent = true;
+
 isUnlocked = false;
 levelDataPos = array_length(global.placedElements);
 
