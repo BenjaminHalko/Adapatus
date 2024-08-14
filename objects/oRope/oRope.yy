@@ -9,7 +9,9 @@
   ],
   "managed":true,
   "name":"oRope",
-  "overriddenProperties":[],
+  "overriddenProperties":[
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"pElement","path":"objects/pElement/pElement.yy",},"propertyId":{"name":"density","path":"objects/pElement/pElement.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"10",},
+  ],
   "parent":{
     "name":"Rope",
     "path":"folders/Elements/Rope.yy",
@@ -20,9 +22,9 @@
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
-  "physicsDensity":30.0,
+  "physicsDensity":10.0,
   "physicsFriction":0.2,
-  "physicsGroup":1,
+  "physicsGroup":2,
   "physicsKinematic":true,
   "physicsLinearDamping":0.1,
   "physicsObject":true,

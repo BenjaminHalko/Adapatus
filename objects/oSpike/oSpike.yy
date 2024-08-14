@@ -8,6 +8,7 @@
   "name":"oSpike",
   "overriddenProperties":[
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"pElement","path":"objects/pElement/pElement.yy",},"propertyId":{"name":"priority","path":"objects/pElement/pElement.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"1",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"pElement","path":"objects/pElement/pElement.yy",},"propertyId":{"name":"density","path":"objects/pElement/pElement.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"0",},
   ],
   "parent":{
     "name":"Spike",

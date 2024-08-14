@@ -3,7 +3,8 @@ enum GameState {
 	SIMULATION,
 	SIMULATION_RESETTING,
 	EDITING_ELEMENT,
-	REWARD
+	REWARD,
+	MOVING_CAMERA
 }
 
 global.gameState = GameState.IDLE;

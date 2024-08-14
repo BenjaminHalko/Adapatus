@@ -4,7 +4,10 @@
   "eventList":[],
   "managed":true,
   "name":"oCrateWall",
-  "overriddenProperties":[],
+  "overriddenProperties":[
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"pElement","path":"objects/pElement/pElement.yy",},"propertyId":{"name":"density","path":"objects/pElement/pElement.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"50",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"pElement","path":"objects/pElement/pElement.yy",},"propertyId":{"name":"priority","path":"objects/pElement/pElement.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"1",},
+  ],
   "parent":{
     "name":"Crate Walls",
     "path":"folders/Elements/Crate/Crate Walls.yy",
