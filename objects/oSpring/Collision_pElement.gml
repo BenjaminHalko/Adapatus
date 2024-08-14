@@ -1,13 +1,29 @@
 /// @desc BOING!!!
 
-var _force = 100;
-var _dir = phy_rotation + 90;
+EnableLive;
 
+if (other.object_index == oRope)
+	exit;
+	
+if (ObjectPartOfConnection(id, other.id, false))
+	exit;
+	
+var _dir = image_angle + 90;
+	
+var _densitySelf = MassOfElement(id);
+var _densityOther = MassOfElement(other.id);
 
-// physics_apply_force(x, y, lengthdir_x(_force, _dir), lengthdir_y(_force, _dir));
+var _forceSelf = 0.4 * _densitySelf;
+var _forceOther = 0.4 * _densityOther;
 
-with (other) {
-	physics_apply_impulse(x, y, lengthdir_x(_force, _dir),lengthdir_y(_force, _dir));
+if (!is_infinity(_densityOther)) {
+	with(other) {
+		SetSpeedOfElement(id, 0, 0);
+		physics_apply_impulse(x, y, lengthdir_x(_forceOther, _dir), lengthdir_y(_forceOther, _dir));
+	}
 }
+
+SetSpeedOfElement(id, 0, 0);
+physics_apply_impulse(x, y, -lengthdir_x(_forceSelf, _dir), -lengthdir_y(_forceSelf, _dir));
 
 image_speed = 1;

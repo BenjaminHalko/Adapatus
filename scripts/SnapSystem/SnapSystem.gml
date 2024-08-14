@@ -14,6 +14,7 @@ function SnapPoint(_x, _y) {
 function __SnapPoint(_x, _y) constructor {
 	__x = _x;
 	__y = _y;
+	__angle = undefined;
 	__parent = other.id;
 	
 	static GetPos = function() {
@@ -180,6 +181,8 @@ function CollectAllSnaps() {
 /// @param  {real} y
 /// @return {struct|undefined}
 function SnapToPoint(_x, _y) {
+	var _returnSnap = undefined;
+	var _angle = undefined;
 	for (var i = 0; i < array_length(global.snapList); i++) {
 		var _snap = global.snapList[i];
 		
@@ -188,15 +191,29 @@ function SnapToPoint(_x, _y) {
 			
 		if (_snap.__parent == id)
 			continue;
-				
-		var _pos = _snap.Snap(_x, _y);
-		
-		return {
-			x: _pos.x,
-			y: _pos.y,
-			snap: _snap
-		};
+			
+		if (is_undefined(_returnSnap))
+			_returnSnap = _snap;
+			
+		if (is_instanceof(_snap, __SnapLine)) {
+			if (!is_undefined(_angle)) {
+				_angle = undefined;
+				break;
+			}
+			var _pos = _snap.GetPos();
+			_angle = point_direction(_pos.x1, _pos.y1, _pos.x2, _pos.y2);
+		}
 	}
 	
-	return undefined;
+	if (is_undefined(_returnSnap))
+		return undefined;
+	
+	var _pos = _returnSnap.Snap(_x, _y);
+	
+	return {
+		x: _pos.x,
+		y: _pos.y,
+		snap: _returnSnap,
+		angle: _angle
+	}
 }

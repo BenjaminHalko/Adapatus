@@ -35,8 +35,8 @@ for(var i = 0; i < _len; i += _widthHalf * 2) {
 					continue;
 				if (_obj.object_index == oRope)
 					continue;
-				ApplyJoint(id, _obj.id, physics_joint_revolute_create(id, _obj.id, x - lengthdir_x(_widthHalf, _dir), y - lengthdir_x(_widthHalf, _dir), 0, 0, false, 0, 0, false, false));
-				ApplyJoint(id, _obj.id, physics_joint_distance_create(id, _obj.id, x, y, _obj.x, _obj.y, false));
+				ApplyJoint(id, _obj.id, physics_joint_revolute_create(id, _obj.id, x - lengthdir_x(_widthHalf, _dir), y - lengthdir_x(_widthHalf, _dir), 0, 0, false, 0, 0, false, false), true);
+				ApplyJoint(id, _obj.id, physics_joint_distance_create(id, _obj.id, x, y, _obj.x, _obj.y, false), true);
 				
 				
 				
@@ -55,8 +55,8 @@ with(_previous) {
 			continue;
 		if (_obj.object_index == oRope)
 			continue;
-		ApplyJoint(id, _obj.id, physics_joint_revolute_create(id, _obj.id, x + lengthdir_x(_widthHalf, _dir), y + lengthdir_y(_widthHalf, _dir), 0, 0, false, 0, 0, false, false));
-		ApplyJoint(id, _obj.id, physics_joint_distance_create(id, _obj.id, x, y, _obj.x, _obj.y, false));
+		ApplyJoint(id, _obj.id, physics_joint_revolute_create(id, _obj.id, x + lengthdir_x(_widthHalf, _dir), y + lengthdir_y(_widthHalf, _dir), 0, 0, false, 0, 0, false, false), true);
+		ApplyJoint(id, _obj.id, physics_joint_distance_create(id, _obj.id, x, y, _obj.x, _obj.y, false), true);
 	}
 }
 
@@ -68,7 +68,7 @@ for(var i = 0; i < array_length(_startElements); i++) {
 	for(var j = 0; j < array_length(_endElements); j++) {
 		var _s = _startElements[i];
 		var _e = _endElements[j];
-		ApplyJoint(_s, _e, physics_joint_rope_create(_s, _e, x, y, x2, y2, _len + _segments / 10, true));
+		ApplyJoint(_s, _e, physics_joint_rope_create(_s, _e, x, y, x2, y2, _len + _segments / 10, true), true);
 	}
 }
 

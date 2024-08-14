@@ -1,16 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"oWall",
-  "eventList":[],
+  "%Name":"oStaticPin",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"oWall",
+  "name":"oStaticPin",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"pElement","path":"objects/pElement/pElement.yy",},"propertyId":{"name":"priority","path":"objects/pElement/pElement.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"0",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"pElement","path":"objects/pElement/pElement.yy",},"propertyId":{"name":"density","path":"objects/pElement/pElement.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"infinity",},
   ],
   "parent":{
-    "name":"Wall",
-    "path":"folders/Elements/Wall.yy",
+    "name":"_Helper",
+    "path":"folders/Elements/_Helper.yy",
   },
   "parentObjectId":{
     "name":"pElement",
@@ -19,8 +20,8 @@
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.0,
-  "physicsFriction":2.0,
-  "physicsGroup":1,
+  "physicsFriction":0.2,
+  "physicsGroup":-1,
   "physicsKinematic":false,
   "physicsLinearDamping":0.1,
   "physicsObject":true,
@@ -29,19 +30,21 @@
   "physicsShape":1,
   "physicsShapePoints":[
     {"x":0.0,"y":0.0,},
-    {"x":32.0,"y":0.0,},
-    {"x":32.0,"y":8.0,},
-    {"x":0.0,"y":8.0,},
+    {"x":2.0,"y":0.0,},
+    {"x":2.0,"y":2.0,},
+    {"x":0.0,"y":2.0,},
   ],
   "physicsStartAwake":true,
-  "properties":[],
+  "properties":[
+    {"$GMObjectProperty":"v1","%Name":"creator","filters":[],"listItems":[],"multiselect":false,"name":"creator","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"noone","varType":0,},
+  ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sWall",
-    "path":"sprites/sWall/sWall.yy",
+    "name":"sPixel",
+    "path":"sprites/sPixel/sPixel.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }

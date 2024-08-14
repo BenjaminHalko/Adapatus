@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"FlameSystem",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"FlameSystem",
+  "parent":{
+    "name":"Elements",
+    "path":"folders/Elements.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

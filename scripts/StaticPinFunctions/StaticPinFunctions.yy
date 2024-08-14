@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"StaticPinFunctions",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"StaticPinFunctions",
+  "parent":{
+    "name":"_Helper",
+    "path":"folders/Elements/_Helper.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

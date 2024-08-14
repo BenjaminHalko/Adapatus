@@ -4,5 +4,3 @@
 event_inherited();
 
 SnapPoint(0, 9);
-
-connectMass = 0;
