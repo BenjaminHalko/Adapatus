@@ -109,7 +109,6 @@ function ObjectPartOfConnection(_id, _objectToCheck, _includeRope=true) {
 }
 
 function __ObjectPartOfConnection(_objsSoFar, _objectToCheck, _includeRope) {
-	print(object_get_name(object_index));
 	for(var i = 0; i < array_length(joints); i++) {
 		if (!array_contains(_objsSoFar, joints[i].boundElement)) {
 			array_push(_objsSoFar, joints[i].boundElement);
