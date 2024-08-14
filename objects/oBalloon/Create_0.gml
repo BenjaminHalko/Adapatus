@@ -3,4 +3,6 @@
 // Inherit the parent event
 event_inherited();
 
-SnapPoint(0, 8);
+SnapPoint(0, 9);
+
+connectMass = 0;

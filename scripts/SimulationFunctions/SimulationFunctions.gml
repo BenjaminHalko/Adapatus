@@ -30,6 +30,11 @@ function __SimulationStart() {
 			event_user(1);
 	}
 	
+	for(var i = 0; i < array_length(_array); i++) {
+		with(_array[i])
+			event_user(2);
+	}
+	
 	_array = [];
 	with(pElement)
 		array_push(_array, id);

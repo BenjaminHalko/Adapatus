@@ -41,3 +41,18 @@ function __Joint(_boundElement, _boundElementIndex, _joint) constructor {
 		physics_joint_delete(joint);
 	}
 }
+
+function MassOfConnectedObjects(_objsSoFar) {
+	var _mass = 0;
+	for(var i = 0; i < array_length(joints); i++) {
+		if (!array_contains(_objsSoFar, joints[i].boundElement)) {
+			array_push(_objsSoFar, joints[i].boundElement);
+			with(joints[i].boundElement) {
+				_mass += phy_mass / density;
+				_mass += MassOfConnectedObjects(_objsSoFar);
+			}
+		}
+	}
+	
+	return _mass;
+}

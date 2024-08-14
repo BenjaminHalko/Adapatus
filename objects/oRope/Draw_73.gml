@@ -9,8 +9,11 @@ if (_angle >= 135 and _angle < 305)
 var _xscale = 1;
 
 var _object = joints[0].boundElement;
-if (instance_exists(_object)) {
+if (instance_exists(_object) and !broken) {
 	_xscale = point_distance(x,y,_object.x, _object.y) / 2;	
 }
 
-draw_sprite_ext(sprite_index, image_index, x, y, _xscale, _yscale, image_angle, image_blend, image_alpha);
+if (!global.drawPhysicsDebug)
+	draw_sprite_ext(sprite_index, image_index, x, y, _xscale, _yscale, image_angle, image_blend, image_alpha);
+else
+	physics_draw_debug();

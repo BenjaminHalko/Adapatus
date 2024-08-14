@@ -8,3 +8,4 @@ nextObject = noone;
 
 joints = [];
 breakTimer = 0;
+broken = false;
