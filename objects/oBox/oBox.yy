@@ -8,7 +8,7 @@
   "name":"oBox",
   "overriddenProperties":[
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"pElement","path":"objects/pElement/pElement.yy",},"propertyId":{"name":"priority","path":"objects/pElement/pElement.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"2",},
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"pElement","path":"objects/pElement/pElement.yy",},"propertyId":{"name":"density","path":"objects/pElement/pElement.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"0.5",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"pElement","path":"objects/pElement/pElement.yy",},"propertyId":{"name":"density","path":"objects/pElement/pElement.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"0.075",},
   ],
   "parent":{
     "name":"Box",
@@ -20,7 +20,7 @@
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
-  "physicsDensity":0.1,
+  "physicsDensity":0.075,
   "physicsFriction":0.2,
   "physicsGroup":1,
   "physicsKinematic":false,

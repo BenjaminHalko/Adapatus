@@ -7,7 +7,7 @@
   "managed":true,
   "name":"oMotorizedBall",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"pElement","path":"objects/pElement/pElement.yy",},"propertyId":{"name":"density","path":"objects/pElement/pElement.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"20",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"pElement","path":"objects/pElement/pElement.yy",},"propertyId":{"name":"density","path":"objects/pElement/pElement.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"0.075",},
   ],
   "parent":{
     "name":"Motorized Ball",
@@ -19,7 +19,7 @@
   },
   "persistent":false,
   "physicsAngularDamping":0.0,
-  "physicsDensity":20.0,
+  "physicsDensity":0.075,
   "physicsFriction":100.0,
   "physicsGroup":1,
   "physicsKinematic":false,
