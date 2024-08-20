@@ -179,6 +179,7 @@
     {"id":{"name":"ElementList","path":"scripts/ElementList/ElementList.yy",},},
     {"id":{"name":"ElementRewardWindow","path":"scripts/ElementRewardWindow/ElementRewardWindow.yy",},},
     {"id":{"name":"ElementToolbarWindow","path":"scripts/ElementToolbarWindow/ElementToolbarWindow.yy",},},
+    {"id":{"name":"ExplosionFunctions","path":"scripts/ExplosionFunctions/ExplosionFunctions.yy",},},
     {"id":{"name":"GameState","path":"scripts/GameState/GameState.yy",},},
     {"id":{"name":"GMLive","path":"scripts/GMLive/GMLive.yy",},},
     {"id":{"name":"GMLiveAPI","path":"scripts/GMLiveAPI/GMLiveAPI.yy",},},
