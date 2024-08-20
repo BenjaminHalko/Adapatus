@@ -9,11 +9,14 @@ enum ELEMENT {
 	SPRING,
 	BALLOON,
 	ROPE,
+	FLAME_THROWER,
 	
 	MAX
 }
 
 global.elementSortList = [
+	ELEMENT.FLAME_THROWER,
+
 	ELEMENT.ROPE,
 	ELEMENT.SPRING,
 	ELEMENT.WHEEL,
@@ -39,3 +42,4 @@ global.elementConfigList[ELEMENT.CRATE] =			new ElementTypeConfig(oCrate, "Crate
 global.elementConfigList[ELEMENT.SPRING] =			new ElementTypeConfig(oSpring, "Spring");
 global.elementConfigList[ELEMENT.ROPE] =			new ElementTypeConfig(oRopePlacable, "Rope", ["x2", "y2"]);
 global.elementConfigList[ELEMENT.BALLOON] =			new ElementTypeConfig(oBalloon, "Balloon");
+global.elementConfigList[ELEMENT.FLAME_THROWER] =	new ElementTypeConfig(oFlameThrower, "Flame Throw");

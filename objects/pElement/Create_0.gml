@@ -25,6 +25,10 @@ lastDragPositionX = 0;
 lastDragPositionY = 0;
 dragWave = new Wave(0, 1, 1, -0.2);
 
+// States
+activated = false;
+onFire = false;
+
 // Joints
 joints = [];
 

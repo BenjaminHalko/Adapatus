@@ -1,16 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"pFlame",
+  "%Name":"oFlameParticle",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"pFlame",
+  "name":"oFlameParticle",
   "overriddenProperties":[],
   "parent":{
-    "name":"_Parent",
-    "path":"folders/Elements/_Parent.yy",
+    "name":"Flamethrower",
+    "path":"folders/Elements/Flamethrower.yy",
   },
   "parentObjectId":null,
   "persistent":false,
