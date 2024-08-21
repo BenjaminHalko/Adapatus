@@ -27,6 +27,21 @@ if (global.gameState == GameState.IDLE and (!MouseOverToolbar() or !_interacting
 }
 
 if (global.elementInteracting == id) {
+	if (!_interacting) {
+		dragXOffset = 0;
+		dragYOffset = 0;
+		
+		if (point_distance(x, y, mouse_x, mouse_y) < point_distance(x, y, x2, y2)) {
+			var _x = x, _y = y;
+			phy_position_x = x2;
+			phy_position_y = y2;
+			x2 = _x;
+			y2 = _y;
+		}
+		
+		phy_position_x = mouse_x;
+		phy_position_y = mouse_y;
+	}
 	sprite_index = sRopePlaceable;
 	phy_rotation = 0;
 	image_xscale = 1;

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"ExplosionFunctions",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"ExplosionFunctions",
+  "parent":{
+    "name":"Elements",
+    "path":"folders/Elements.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
