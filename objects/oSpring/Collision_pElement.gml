@@ -5,16 +5,20 @@ EnableLive;
 if (other.object_index == oRope)
 	exit;
 	
-if (ObjectPartOfConnection(id, other.id, false))
+if (ObjectPartOfConnection(id, other.id, false)) 
 	exit;
 	
 var _dir = image_angle + 90;
 	
 var _densitySelf = MassOfElement(id);
+
 var _densityOther = MassOfElement(other.id);
 
-var _forceSelf = 0.4 * _densitySelf;
-var _forceOther = 0.4 * _densityOther;
+var _forceSelf = 75 * _densitySelf;
+var _forceOther = 75 * _densityOther;
+
+print (_forceOther, _densityOther);
+
 
 if (!is_infinity(_densityOther)) {
 	with(other) {
@@ -23,7 +27,11 @@ if (!is_infinity(_densityOther)) {
 	}
 }
 
-SetSpeedOfElement(id, 0, 0);
-physics_apply_impulse(x, y, -lengthdir_x(_forceSelf, _dir), -lengthdir_y(_forceSelf, _dir));
+
+if (!is_infinity(_densitySelf)) {
+	SetSpeedOfElement(id, 0, 0);
+	physics_apply_impulse(x, y, -lengthdir_x(_forceSelf, _dir), -lengthdir_y(_forceSelf, _dir));
+}
+
 
 image_speed = 1;

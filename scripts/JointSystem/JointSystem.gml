@@ -52,6 +52,7 @@ function MassOfElement(_id) {
 		var _mass = __MassOfConnectedElements([id]);
 		if (is_infinity(_mass))
 			return infinity;
+		print ("d",phy_mass, density); 
 		return _mass + phy_mass * density;	
 	}
 }
@@ -85,7 +86,7 @@ function SetSpeedOfElement(_id, _speedX, _speedY) {
 	with (_id) {
 		phy_speed_x = _speedX;
 		phy_speed_y = _speedY;
-		return __SetSpeedOfConnectedElements([id], _speedX, _speedY);	
+		__SetSpeedOfConnectedElements([id], _speedX, _speedY);	
 	}
 }
 
