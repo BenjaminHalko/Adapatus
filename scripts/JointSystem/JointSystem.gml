@@ -52,7 +52,6 @@ function MassOfElement(_id) {
 		var _mass = __MassOfConnectedElements([id]);
 		if (is_infinity(_mass))
 			return infinity;
-		print ("d",phy_mass, density); 
 		return _mass + phy_mass * density;	
 	}
 }

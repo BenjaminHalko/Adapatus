@@ -70,6 +70,7 @@
     {"$GMFolder":"","%Name":"Save Load","folderPath":"folders/Save Load.yy","name":"Save Load","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Simulation","folderPath":"folders/Simulation.yy","name":"Simulation","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Goals","folderPath":"folders/Simulation/Goals.yy","name":"Goals","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Title","folderPath":"folders/Title.yy","name":"Title","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
   "IncludedFiles":[
     {"$GMIncludedFile":"","%Name":"gcmt-dll.dll","CopyToMask":0,"filePath":"datafiles/GMLive","name":"gcmt-dll.dll","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
@@ -115,6 +116,7 @@
     {"id":{"name":"oSpike","path":"objects/oSpike/oSpike.yy",},},
     {"id":{"name":"oSpring","path":"objects/oSpring/oSpring.yy",},},
     {"id":{"name":"oStaticPin","path":"objects/oStaticPin/oStaticPin.yy",},},
+    {"id":{"name":"oTitle","path":"objects/oTitle/oTitle.yy",},},
     {"id":{"name":"oToolbar","path":"objects/oToolbar/oToolbar.yy",},},
     {"id":{"name":"oTransition","path":"objects/oTransition/oTransition.yy",},},
     {"id":{"name":"oWall","path":"objects/oWall/oWall.yy",},},
@@ -125,6 +127,7 @@
     {"id":{"name":"_rInit","path":"rooms/_rInit/_rInit.yy",},},
     {"id":{"name":"rLevel","path":"rooms/rLevel/rLevel.yy",},},
     {"id":{"name":"rm_blank_room","path":"rooms/rm_blank_room/rm_blank_room.yy",},},
+    {"id":{"name":"rTitle","path":"rooms/rTitle/rTitle.yy",},},
     {"id":{"name":"__MenuWidget","path":"scripts/__MenuWidget/__MenuWidget.yy",},},
     {"id":{"name":"__scribble_class_element","path":"scripts/__scribble_class_element/__scribble_class_element.yy",},},
     {"id":{"name":"__scribble_class_event","path":"scripts/__scribble_class_event/__scribble_class_event.yy",},},
@@ -326,6 +329,7 @@
   "RoomOrderNodes":[
     {"roomId":{"name":"_rInit","path":"rooms/_rInit/_rInit.yy",},},
     {"roomId":{"name":"rLevel","path":"rooms/rLevel/rLevel.yy",},},
+    {"roomId":{"name":"rTitle","path":"rooms/rTitle/rTitle.yy",},},
     {"roomId":{"name":"rm_blank_room","path":"rooms/rm_blank_room/rm_blank_room.yy",},},
   ],
   "templateType":"game",

@@ -54,7 +54,7 @@ if (global.elementInteracting == noone) {
 					phy_position_x = round(_snap.x);
 					phy_position_y = round(_snap.y);
 				
-					if (!is_undefined(_snap.angle))
+					if (!is_undefined(_snap.angle) and canRotateWithSnaps)
 						phy_rotation = -_snap.angle;
 				} else {
 					phy_position_x = round(_mx);

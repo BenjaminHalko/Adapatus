@@ -1,7 +1,5 @@
 /// @desc Setup Game
 
-gml_release_mode(true);
-
 // Debug Objects
 if (DebugMode) {
 	// Create GMLive

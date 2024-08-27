@@ -14,11 +14,8 @@ var _densitySelf = MassOfElement(id);
 
 var _densityOther = MassOfElement(other.id);
 
-var _forceSelf = 75 * _densitySelf;
-var _forceOther = 75 * _densityOther;
-
-print (_forceOther, _densityOther);
-
+var _forceSelf = 50 * _densitySelf;
+var _forceOther = 50 * _densityOther;
 
 if (!is_infinity(_densityOther)) {
 	with(other) {
@@ -27,11 +24,9 @@ if (!is_infinity(_densityOther)) {
 	}
 }
 
-
 if (!is_infinity(_densitySelf)) {
 	SetSpeedOfElement(id, 0, 0);
 	physics_apply_impulse(x, y, -lengthdir_x(_forceSelf, _dir), -lengthdir_y(_forceSelf, _dir));
 }
-
 
 image_speed = 1;
