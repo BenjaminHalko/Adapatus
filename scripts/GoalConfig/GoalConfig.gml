@@ -43,9 +43,9 @@ function __GoalConfig() constructor {
 		if (is_undefined(__targetElement))
 			__setup();
 			
-		__targetElement.id = GetElementID(__targetElement.levelDataPos);
-		for(var i = 0; i < array_length(__subElements); i++)
-			__subElements[i].id = GetElementID(__subElements[i].levelDataPos);
+		//__targetElement.id = GetElementID(__targetElement.levelDataPos);
+		//for(var i = 0; i < array_length(__subElements); i++)
+			//__subElements[i].id = GetElementID(__subElements[i].levelDataPos);
 		
 		if (!is_undefined(__onReset))
 			__onReset();

@@ -26,6 +26,9 @@ cursorSize = CursorSize;
 // Initializes Scribble
 ScribbleConfig();
 
+// Music
+audio_play_sound(mMusic, 1, true);
+
 // Debug
 global.frameNumber = 0;
 
