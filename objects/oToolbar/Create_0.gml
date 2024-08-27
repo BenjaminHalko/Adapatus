@@ -12,3 +12,6 @@ elementInHand = noone;
 elementHovered = -1;
 elementListXStart = 40;
 usableElements = [];
+
+// TEMP
+elementOffset = 0;

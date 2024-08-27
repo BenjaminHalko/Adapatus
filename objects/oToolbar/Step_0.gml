@@ -7,7 +7,10 @@ var _previouslyHovered = elementHovered;
 if (elementInHand == noone)
 	elementHovered = -1;
 	
-var _elemX = elementListXStart;
+	
+elementOffset = clamp(elementOffset + (mouse_wheel_down() - mouse_wheel_up()) * 0.08, 0, 1);
+	
+var _elemX = round((-array_length(usableElements)*(usableElements[0].__width - 2)+ResWidth-2)*elementOffset);//elementListXStart;
 for(var i = 0; i < array_length(usableElements); i++) {
 	var _info = usableElements[i];
 	var _usable = global.elementQuantity[$ _info.__type] > 0 or elementHovered == i;
