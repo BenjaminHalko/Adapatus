@@ -53,58 +53,76 @@
     As we don't have our Levels figured out yet, we are not too sure how to program the rewards at the end while it is still being somewhat randomized.\   
  
 
-**Iteration Two:**
+> **Iteration Two:**
 
-Welcome Back!\
-We've continued to progress our game with implementations of some exiting new elements and physics improvements! 
+> Welcome Back!\
+> We've continued to progress our game with implementations of some exiting new elements and physics improvements! 
 
-### Features implemented in this iteration:
+> ### Features implemented in this iteration:
 
-- **BOINGGG!**\
-  Springs are here!\
-  A great addition to our elements that allows players to propel anything they need to the stratosphere!
+> - **BOINGGG!**\
+ > Springs are here!\
+ > A great addition to our elements that allows players to propel anything they need to the stratosphere!
 
-  ![Spring-ezgif com-optimize](https://github.com/user-attachments/assets/b67ffeeb-f867-4592-b395-7b39304aff18)
+ > ![Spring-ezgif com-optimize](https://github.com/user-attachments/assets/b67ffeeb-f867-4592-b395-7b39304aff18)
 
-- **Rope!**\
-  Our new element - Rope - brings about a great new mechanic to our game!\
-  With it, a player can make and design contraptions out of their wildest imaginations, connecting rope to various items makes the possibilities and dynamics between elements quite possibly endless and the results super exciting!\
-  Especially when used in tangent with our next element...
+> - **Rope!**\
+> Our new element - Rope - brings about a great new mechanic to our game!\
+> With it, a player can make and design contraptions out of their wildest imaginations, connecting rope to various items makes the possibilities and dynamics between elements quite possibly endless and the results super exciting!\
+> Especially when used in tangent with our next element...
 
-  ![Rope](https://github.com/user-attachments/assets/29ce752b-7af0-41f7-a8be-d0e0db3d9fc2)
+> ![Rope](https://github.com/user-attachments/assets/29ce752b-7af0-41f7-a8be-d0e0db3d9fc2)
 
-- **Balloons!**\
-  Thats right! Our very own floatable fortitude of an element, tasked with carrying even the heaviest of objects (Given you've got enough balloons of course)!\
-  This element has been super fun to develop, test and play with. Still, of course, it came with its challenges of having to revamp our physics engine & values to incorporate this element being able to float things away!
+> - **Balloons!**\
+> Thats right! Our very own floatable fortitude of an element, tasked with carrying even the heaviest of objects (Given you've got enough balloons of course)!\
+> This element has been super fun to develop, test and play with. Still, of course, it came with its challenges of having to revamp our physics engine & values to incorporate this element being able to float things away!
 
-  ![Balloons](https://github.com/user-attachments/assets/0099cff7-cc12-4552-a383-8df72bfe32de)
+> ![Balloons](https://github.com/user-attachments/assets/0099cff7-cc12-4552-a383-8df72bfe32de)
 
-- **Snapping & Transitioning Systems!**\
-  Allows a player to better understand the elements that can be connected together with a slight magnet to the cursor!
+> - **Snapping & Transitioning Systems!**\
+> Allows a player to better understand the elements that can be connected together with a slight magnet to the cursor!
   
-  ![Snappin](https://github.com/user-attachments/assets/3865bbf3-363d-493b-80ee-bd24964d7b9f)
+> ![Snappin](https://github.com/user-attachments/assets/3865bbf3-363d-493b-80ee-bd24964d7b9f)
 
-- **Good Ol' Bug Fixes!**\
-  Many bugs squashed in this update due to the complexity of the elements introduced, as well as adjustments to our physics engine and density values to make sure our elements feel natural in gameplay!
+> - **Good Ol' Bug Fixes!**\
+> Many bugs squashed in this update due to the complexity of the elements introduced, as well as adjustments to our physics engine and density values to make sure our elements feel natural in gameplay!
 
-### Features we hope to implement in the next iteration:
+> ### Features we hope to implement in the next iteration:
 
-- **More Dynamic & Fun Elements!**\
-  We have a ton of exciting elements players can play around with coming very soon, here's a sneak peek...
+> - **More Dynamic & Fun Elements!**\
+> We have a ton of exciting elements players can play around with coming very soon, here's a sneak peek...
 
-  ![Cannon](https://github.com/user-attachments/assets/2437bf9d-68df-4fe5-9dc4-21808a980439)
+> ![Cannon](https://github.com/user-attachments/assets/2437bf9d-68df-4fe5-9dc4-21808a980439)
 
-- **Let there be FIRE!**\
-  We also have a new spreadable element planned to come very soon!\
-  It can help players achieve various goals and cause even more chaos!
+> - **Let there be FIRE!**\
+> We also have a new spreadable element planned to come very soon!\
+> It can help players achieve various goals and cause even more chaos!
 
-### Obstacles Encountered:
+> ### Obstacles Encountered:
 
-- **Physics Phenomena & a Bunch'a Bugs**\
-  As mentioned before, due to the elements heavily relying on our game physics and values, we've had to go back and almost overhaul all our values.\
-  Additionally, just the few hundred bugs that came with these elements too! 
+> - **Physics Phenomena & a Bunch'a Bugs**\
+> As mentioned before, due to the elements heavily relying on our game physics and values, we've had to go back and almost overhaul all our values.\
+> Additionally, just the few hundred bugs that came with these elements too!
 
-#### We hope to continue with our own iterations (hehe) as we try to develop this game into a full & interesting game!
-##### *Remember: Polish > Features!*
+> #### We hope to continue with our own iterations (hehe) as we try to develop this game into a full & interesting game!
+> ##### *Remember: Polish > Features!*
 
-##### Thank You Once Again! And cya next Iteration!
+**Final Iteration:**
+### Welcome to our final iteration and 'final' game (for now):
+
+- **Playtesting and Interactions:**\
+    We've concluded plenty of playtesting among ourselves, our classmates and a professional video game producer too, learning a ton of important things in the process!.
+
+  For one, almost everyone enjoyed having an open sandbox to play and create their own levels in. Players immediately resorted to fun items like the rope and spring in order to test the physics of the game to their limits and this was incredibly fun and interesting to watch - players' retentions were always high, which was awesome to see at players meticulously crafted their own levels and created their own enjoyment.
+
+  Due to this, and various other factors, we've decided to make the creative decision to continue the development of our game as a polished demo, instead of the original full game.
+
+- **The Adapatus Demo!**\
+    While our game may've started as a unique take on the rouge-like genre, combining it with a sort of construction/ simulation game genre, we realised that we, unfortunately, didn't have the time to realize our original visions with this game.
+
+- **A Great Base to Leap off!**\
+    That being said, what we have created here is a well-programmed, flexible and great demo that allows us to continue the development of this game in the future, perhaps even to studios to create a truly unique and fun game.
+
+
+
+##### Thank You Once Again! The creative creation and making of this game has been extremely enjoyable & informative, as well as allowed us to work with new people! (R.I.P Ayush (He's fine he just had to drop out of this term))  
